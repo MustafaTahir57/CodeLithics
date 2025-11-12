@@ -26,7 +26,7 @@ const About = () => {
             About <span className="text-gradient">Our Team</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
-            We're a team of blockchain engineers and developers led by{" "}
+            Codelithics is a Web3 & AI development studio led by{" "}
             <span className="text-primary font-semibold">Muhammad Mustafa Tahir</span>, 
             delivering secure and scalable decentralized solutions worldwide.
           </p>

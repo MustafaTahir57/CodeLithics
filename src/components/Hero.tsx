@@ -32,17 +32,17 @@ const Hero = () => {
           <div className="flex items-center justify-center gap-2 mb-6">
             <Sparkles className="w-5 h-5 text-primary animate-glow" />
             <span className="text-sm uppercase tracking-wider text-muted-foreground font-medium">
-              Web3 Development Agency
+              Web3 & AI Development Studio
             </span>
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold mb-6 leading-tight">
             Building the Future of{" "}
-            <span className="text-gradient">Web3</span>
+            <span className="text-gradient">Web3 & AI</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
-            Smart Contracts, NFTs, and DeFi Solutions
+            Smart Contracts, NFTs, DeFi, and AI Solutions
           </p>
 
           <p className="text-base md:text-lg text-muted-foreground/80 max-w-2xl mx-auto mb-12">

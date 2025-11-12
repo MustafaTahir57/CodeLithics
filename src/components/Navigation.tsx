@@ -42,7 +42,7 @@ const Navigation = () => {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 bg-gradient-primary rounded-lg" />
-              <span className="text-xl font-heading font-bold text-gradient">Web3 Agency</span>
+              <span className="text-xl font-heading font-bold text-gradient">Codelithics</span>
             </div>
 
             {/* Desktop Navigation */}

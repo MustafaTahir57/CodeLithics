@@ -8,10 +8,21 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 bg-gradient-primary rounded-lg" />
-              <span className="text-xl font-heading font-bold text-gradient">Web3 Agency</span>
+              <span className="text-xl font-heading font-bold text-gradient">Codelithics</span>
             </div>
             <p className="text-muted-foreground text-sm">
-              Building the future of Web3 with secure, scalable, and innovative blockchain solutions.
+              A Web3 & AI development studio led by Muhammad Mustafa Tahir.
+            </p>
+            <p className="text-muted-foreground text-xs mt-2">
+              All open-source projects are maintained by the founder:{" "}
+              <a 
+                href="https://github.com/MustafaTahir57" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                github.com/MustafaTahir57
+              </a>
             </p>
           </div>
 
@@ -80,7 +91,7 @@ const Footer = () => {
 
         <div className="border-t border-border pt-8 text-center">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Web3 Agency. Led by Muhammad Mustafa Tahir. All rights reserved.
+            © {new Date().getFullYear()} Codelithics. Led by Muhammad Mustafa Tahir. All rights reserved.
           </p>
         </div>
       </div>
