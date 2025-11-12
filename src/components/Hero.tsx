@@ -95,7 +95,7 @@ const Hero = () => {
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 leading-tight">
             Building the Future of{" "}
             <span className="text-gradient">Web3 & AI</span>
           </h1>
