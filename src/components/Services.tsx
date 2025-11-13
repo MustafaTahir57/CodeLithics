@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Code2, Blocks, Coins, Shield, FileCode, Wallet } from "lucide-react";
+import { Code2, Blocks, Coins, Brain, FileCode, Wallet } from "lucide-react";
 
 const services = [
   {
     icon: Code2,
     title: "Smart Contract Development",
-    description: "ERC-20, ERC-721, Staking contracts, and custom tokenomics solutions built with Solidity.",
+    description: "Smart contract development for all EVM chains — from ERC-20s to DeFi protocols, built secure and audit-ready.",
   },
   {
     icon: Blocks,
@@ -24,9 +24,9 @@ const services = [
     description: "Liquidity pools, yield farming, staking platforms, and advanced DeFi mechanisms.",
   },
   {
-    icon: Shield,
-    title: "Smart Contract Audits",
-    description: "Comprehensive security audits to identify vulnerabilities and ensure code safety.",
+    icon: Brain,
+    title: "AI-Powered Solutions",
+    description: "Custom AI integrations, chatbots, and intelligent automation to enhance your Web3 products.",
   },
   {
     icon: FileCode,
