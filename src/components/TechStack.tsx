@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import ethereumLogo from "@/assets/ethereum-logo.png";
+import ipfsLogo from "@/assets/ipfs-logo.png";
 
 const technologies = [
   // Smart Contracts
@@ -14,7 +15,7 @@ const technologies = [
   { name: "Ethers.js", icon: "https://docs.ethers.org/v5/static/logo.svg" },
   { name: "Chainlink", icon: "https://avatars.githubusercontent.com/u/7078854?s=200&v=4" },
   { name: "Moralis", icon: "https://avatars.githubusercontent.com/u/62961448?s=200&v=4" },
-  { name: "IPFS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ipfs/ipfs-original.svg" },
+  { name: "IPFS", icon: ipfsLogo },
   
   // Web Development
   { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
