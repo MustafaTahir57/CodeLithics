@@ -40,9 +40,9 @@ const Navigation = () => {
         }`}
       >
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-24">
             <div className="flex items-center gap-2">
-              <img src={codelithicsLogo} alt="CodeLithics Logo" className="h-16 w-auto" />
+              <img src={codelithicsLogo} alt="CodeLithics Logo" className="h-20 w-auto" />
             </div>
 
             {/* Desktop Navigation */}
@@ -81,7 +81,7 @@ const Navigation = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="fixed top-16 left-0 right-0 z-40 bg-background/95 backdrop-blur-lg border-b border-border md:hidden"
+          className="fixed top-24 left-0 right-0 z-40 bg-background/95 backdrop-blur-lg border-b border-border md:hidden"
         >
           <div className="container mx-auto px-4 py-6 space-y-4">
             {navItems.map((item) => (
