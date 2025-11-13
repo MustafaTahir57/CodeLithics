@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
+import ethereumLogo from "@/assets/ethereum-logo.png";
 
 const technologies = [
   // Smart Contracts
   { name: "Solidity", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg" },
   { name: "Hardhat", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hardhat/hardhat-original.svg" },
   { name: "OpenZeppelin", icon: "https://avatars.githubusercontent.com/u/22205159?s=200&v=4" },
-  { name: "Ethereum", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ethereum/ethereum-original.svg" },
+  { name: "Ethereum", icon: ethereumLogo },
   { name: "Base", icon: "https://avatars.githubusercontent.com/u/108554348?s=200&v=4" },
   
   // Web3 & DeFi
