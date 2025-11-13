@@ -3,21 +3,21 @@ import { motion } from "framer-motion";
 const technologies = [
   // Smart Contracts
   { name: "Solidity", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg" },
-  { name: "Hardhat", icon: "https://seeklogo.com/images/H/hardhat-logo-888739EBB4-seeklogo.com.png" },
-  { name: "OpenZeppelin", icon: "https://cryptologos.cc/logos/versions/openzeppelin-zrx-logo.svg?v=029" },
-  { name: "Ethereum", icon: "https://cryptologos.cc/logos/ethereum-eth-logo.svg?v=029" },
-  { name: "Base", icon: "https://avatars.githubusercontent.com/u/108554348?s=280&v=4" },
+  { name: "Hardhat", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hardhat/hardhat-original.svg" },
+  { name: "OpenZeppelin", icon: "https://avatars.githubusercontent.com/u/22205159?s=200&v=4" },
+  { name: "Ethereum", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ethereum/ethereum-original.svg" },
+  { name: "Base", icon: "https://avatars.githubusercontent.com/u/108554348?s=200&v=4" },
   
   // Web3 & DeFi
-  { name: "Web3.js", icon: "https://cryptologos.cc/logos/versions/web3-foundation-web3-logo.svg?v=029" },
-  { name: "Ethers.js", icon: "https://seeklogo.com/images/E/ethers-logo-D5B86204D8-seeklogo.com.png" },
-  { name: "Chainlink", icon: "https://cryptologos.cc/logos/chainlink-link-logo.svg?v=029" },
+  { name: "Web3.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/web3js/web3js-original.svg" },
+  { name: "Ethers.js", icon: "https://docs.ethers.org/v5/static/logo.svg" },
+  { name: "Chainlink", icon: "https://avatars.githubusercontent.com/u/7078854?s=200&v=4" },
   { name: "Moralis", icon: "https://avatars.githubusercontent.com/u/62961448?s=200&v=4" },
-  { name: "IPFS", icon: "https://upload.wikimedia.org/wikipedia/commons/1/18/Ipfs-logo-1024-ice-text.png" },
+  { name: "IPFS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ipfs/ipfs-original.svg" },
   
   // Web Development
   { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-  { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+  { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" },
   { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
   { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
   { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
@@ -26,7 +26,7 @@ const technologies = [
   { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
   { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
   { name: "PyTorch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
-  { name: "OpenAI", icon: "https://static-00.iconduck.com/assets.00/openai-icon-2021x2048-4rpe5x7n.png" },
+  { name: "OpenAI", icon: "https://avatars.githubusercontent.com/u/14957082?s=200&v=4" },
   { name: "LangChain", icon: "https://avatars.githubusercontent.com/u/126733545?s=200&v=4" },
 ];
 
