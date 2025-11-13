@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import codelithicsLogo from "@/assets/codelithics-logo.svg";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,8 +42,7 @@ const Navigation = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-gradient-primary rounded-lg" />
-              <span className="text-xl font-heading font-bold text-gradient">Codelithics</span>
+              <img src={codelithicsLogo} alt="CodeLithics Logo" className="h-8 w-auto" />
             </div>
 
             {/* Desktop Navigation */}

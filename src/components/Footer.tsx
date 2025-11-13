@@ -1,4 +1,5 @@
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import codelithicsLogo from "@/assets/codelithics-logo.svg";
 
 const Footer = () => {
   return (
@@ -7,8 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-primary rounded-lg" />
-              <span className="text-xl font-heading font-bold text-gradient">Codelithics</span>
+              <img src={codelithicsLogo} alt="CodeLithics Logo" className="h-8 w-auto" />
             </div>
             <p className="text-muted-foreground text-sm">
               A Web3 & AI development studio led by Muhammad Mustafa Tahir.
