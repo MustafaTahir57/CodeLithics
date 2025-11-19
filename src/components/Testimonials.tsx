@@ -22,6 +22,8 @@ import reviewTexturehaven from "@/assets/review-texturehaven.png";
 import reviewBandyka77 from "@/assets/review-bandyka77.png";
 import reviewUpwork1 from "@/assets/review-upwork-1.png";
 import reviewUpwork2 from "@/assets/review-upwork-2.png";
+import reviewCyberg99 from "@/assets/review-cyberg99.png";
+import reviewNlcrydertheman from "@/assets/review-nlcrydertheman.png";
 
 const testimonials = [
   {
@@ -63,6 +65,22 @@ const testimonials = [
     content: "Working with Mustafa is great experience I would really love to work again he's really good in web3 and blockchain ! Recommended",
     rating: 5,
     screenshot: reviewUpwork2,
+  },
+  {
+    name: "cyberg_99",
+    role: "Fiverr Client, South Korea",
+    platform: "Fiverr",
+    content: "Working with M Mustafa on Blockchain Development & Solutions was a truly EXCEPTIONAL experience. The professionalism and depth of understanding demonstrated were impressive, and his ability to exceed expectations with comprehensive documentation stands out. His cooperation and dedication were TOP-NOTCH, making him a pleasure to collaborate with! 🔥",
+    rating: 5,
+    screenshot: reviewCyberg99,
+  },
+  {
+    name: "nlcrydertheman",
+    role: "Fiverr Client, United States",
+    platform: "Fiverr",
+    content: "Working with M Mustafa was a DELIGHT! His professionalism and attention to detail in blockchain development EXCEEDED my expectations. The timely delivery and fluent communication made the process smooth and enjoyable. 🔥",
+    rating: 5,
+    screenshot: reviewNlcrydertheman,
   },
 ];
 
@@ -123,7 +141,7 @@ const Testimonials = () => {
                             <DialogTrigger asChild>
                               <Button variant="outline" size="sm" className="gap-2">
                                 <ExternalLink className="w-3 h-3" />
-                                View Proof
+                                See Review
                               </Button>
                             </DialogTrigger>
                             <DialogContent className="max-w-4xl max-h-[90vh]">
