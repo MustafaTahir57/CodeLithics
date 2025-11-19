@@ -32,6 +32,30 @@ const About = () => {
           </p>
         </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="max-w-4xl mx-auto mb-16"
+        >
+          <Card className="bg-gradient-primary p-1 card-glow overflow-hidden">
+            <div className="bg-card rounded-lg p-2">
+              <video
+                controls
+                className="w-full rounded-lg"
+                poster="/placeholder.svg"
+              >
+                <source
+                  src={`${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/videos/intro-video.mp4`}
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </Card>
+        </motion.div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {stats.map((stat, index) => (
             <motion.div
