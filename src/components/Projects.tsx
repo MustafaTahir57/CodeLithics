@@ -3,10 +3,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import dogwalkerThumbnail from "@/assets/dogwalker-thumbnail.png";
 import ithThumbnail from "@/assets/ith-thumbnail.png";
 import qdviThumbnail from "@/assets/qdvi-thumbnail.png";
 import tedaiThumbnail from "@/assets/tedai-thumbnail.png";
+import gridriderThumbnail from "@/assets/gridrider-thumbnail.png";
 
 const projects = [
   {
@@ -37,6 +39,13 @@ const projects = [
     image: tedaiThumbnail,
     demoUrl: "https://dog-walker.io/",
   },
+  {
+    title: "GridRider",
+    description: "Engaging blockchain gaming platform featuring two fantastic games with competitive gameplay and rewards",
+    tags: ["Gaming", "Web3", "React", "Solidity", "DApp"],
+    image: gridriderThumbnail,
+    demoUrl: "https://www.gridrider.io/",
+  },
 ];
 
 const Projects = () => {
@@ -58,52 +67,58 @@ const Projects = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Card className="bg-card border-border hover:border-primary/50 transition-all duration-300 card-glow overflow-hidden h-full group">
-                <div className="relative overflow-hidden h-48">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
-                </div>
-                <CardHeader>
-                  <CardTitle className="text-2xl font-heading">{project.title}</CardTitle>
-                  <CardDescription className="text-muted-foreground leading-relaxed">
-                    {project.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary" className="bg-primary/10 text-primary border-primary/20">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="w-full"
-                    onClick={() => window.open(project.demoUrl, '_blank')}
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    View Live Demo
-                  </Button>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
+        <Carousel className="w-full max-w-6xl mx-auto">
+          <CarouselContent>
+            {projects.map((project, index) => (
+              <CarouselItem key={project.title} className="md:basis-1/2 lg:basis-1/3">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="h-full"
+                >
+                  <Card className="bg-card border-border hover:border-primary/50 transition-all duration-300 card-glow overflow-hidden h-full group">
+                    <div className="relative overflow-hidden h-48">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
+                    </div>
+                    <CardHeader>
+                      <CardTitle className="text-2xl font-heading">{project.title}</CardTitle>
+                      <CardDescription className="text-muted-foreground leading-relaxed">
+                        {project.description}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.tags.map((tag) => (
+                          <Badge key={tag} variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                            {tag}
+                          </Badge>
+                        ))}
+                      </div>
+                      <Button 
+                        variant="outline" 
+                        size="sm" 
+                        className="w-full"
+                        onClick={() => window.open(project.demoUrl, '_blank')}
+                      >
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        View Live Demo
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
     </section>
   );
