@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import dogwalkerThumbnail from "@/assets/dogwalker-thumbnail.png";
+import ithThumbnail from "@/assets/ith-thumbnail.png";
 
 const projects = [
   {
@@ -11,6 +12,13 @@ const projects = [
     description: "A complete presale dapp with staking and reward features",
     tags: ["Solidity", "React", "Web3.js", "Staking", "Presale"],
     image: dogwalkerThumbnail,
+    demoUrl: "https://dog-walker.io/",
+  },
+  {
+    title: "In The House",
+    description: "Full-featured token sale platform with integrated staking mechanism and earning rewards",
+    tags: ["Solidity", "React", "Web3.js", "Rewards", "Token Sale"],
+    image: ithThumbnail,
     demoUrl: "https://dog-walker.io/",
   },
 ];
