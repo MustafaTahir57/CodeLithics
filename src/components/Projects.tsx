@@ -6,6 +6,7 @@ import { ExternalLink } from "lucide-react";
 import dogwalkerThumbnail from "@/assets/dogwalker-thumbnail.png";
 import ithThumbnail from "@/assets/ith-thumbnail.png";
 import qdviThumbnail from "@/assets/qdvi-thumbnail.png";
+import tedaiThumbnail from "@/assets/tedai-thumbnail.png";
 
 const projects = [
   {
@@ -27,6 +28,13 @@ const projects = [
     description: "Secure and streamlined token sale solution with wallet integration and real-time purchase tracking",
     tags: ["Solidity", "Web3", "React", "Token Sale", "USDT"],
     image: qdviThumbnail,
+    demoUrl: "https://dog-walker.io/",
+  },
+  {
+    title: "TedAI",
+    description: "AI-powered chatbot meme coin with interactive conversational features and community engagement",
+    tags: ["AI", "React", "Web3", "Meme Coin", "Chatbot"],
+    image: tedaiThumbnail,
     demoUrl: "https://dog-walker.io/",
   },
 ];
