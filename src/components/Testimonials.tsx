@@ -4,21 +4,21 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Alex Johnson",
-    role: "CEO, CryptoStartup",
-    content: "Delivered a flawless DeFi contract with fast communication and on-time deployment. The team's expertise in Solidity is exceptional.",
+    name: "salvatorer",
+    role: "Fiverr Client, Mali",
+    content: "Honestly, I've worked with many developers in the blockchain space, but he truly stands out. He listens carefully, has incredible patience, and unlike many others, negotiating with him isn't a crime, he's genuinely open-minded in a world where everyone only talks about money. An absolute ace in his field. I recommend him to everyone. The true King of IT!",
     rating: 5,
   },
   {
-    name: "Sarah Mitchell",
-    role: "Founder, NFT Platform",
-    content: "Outstanding work on our NFT marketplace. The code quality and attention to security details exceeded our expectations.",
+    name: "texturehaven",
+    role: "Fiverr Client, Netherlands",
+    content: "Satisfied with the product, feedback is well received, and support continues until the final result is achieved",
     rating: 5,
   },
   {
-    name: "David Chen",
-    role: "CTO, Blockchain Solutions",
-    content: "Professional, responsive, and highly skilled. They transformed our Web3 vision into reality with clean, efficient code.",
+    name: "bandyka77",
+    role: "Fiverr Client, Hungary",
+    content: "Despite the unexpected difficulties during development, the job was completed well and he went beyond the scope to get things sorted. This is what I would expect from a good developer who is looking to establish themselves for the long run. Well done.",
     rating: 5,
   },
 ];
