@@ -2,26 +2,16 @@ import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import dogwalkerThumbnail from "@/assets/dogwalker-thumbnail.png";
 
 const projects = [
   {
-    title: "Rabbit Network",
-    description: "Complete DeFi & NFT ecosystem with staking mechanisms, liquidity pools, and NFT marketplace integration.",
-    tags: ["Solidity", "React", "Web3.js", "DeFi", "NFT"],
-    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&auto=format&fit=crop&q=80",
-  },
-  {
-    title: "DeFi Staking Protocol",
-    description: "Advanced staking platform with flexible lock periods, reward distribution, and governance features.",
-    tags: ["Solidity", "Hardhat", "Ethers.js", "Staking"],
-    image: "https://images.unsplash.com/photo-1642104704074-907c0698cbd9?w=800&auto=format&fit=crop&q=80",
-  },
-  {
-    title: "NFT Marketplace",
-    description: "Full-featured NFT marketplace with lazy minting, royalty management, and multi-chain support.",
-    tags: ["ERC-721", "IPFS", "React", "Web3"],
-    image: "https://images.unsplash.com/photo-1620321023374-d1a68fbc720d?w=800&auto=format&fit=crop&q=80",
+    title: "Dog-Walker",
+    description: "A complete presale dapp with staking and reward features",
+    tags: ["Solidity", "React", "Web3.js", "Staking", "Presale"],
+    image: dogwalkerThumbnail,
+    demoUrl: "https://dog-walker.io/",
   },
 ];
 
@@ -76,16 +66,15 @@ const Projects = () => {
                       </Badge>
                     ))}
                   </div>
-                  <div className="flex gap-2">
-                    <Button variant="outline" size="sm" className="flex-1">
-                      <Github className="w-4 h-4 mr-2" />
-                      Code
-                    </Button>
-                    <Button variant="outline" size="sm" className="flex-1">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Demo
-                    </Button>
-                  </div>
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="w-full"
+                    onClick={() => window.open(project.demoUrl, '_blank')}
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    View Live Demo
+                  </Button>
                 </CardContent>
               </Card>
             </motion.div>
