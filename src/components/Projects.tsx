@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import dogwalkerThumbnail from "@/assets/dogwalker-thumbnail.png";
 import ithThumbnail from "@/assets/ith-thumbnail.png";
+import qdviThumbnail from "@/assets/qdvi-thumbnail.png";
 
 const projects = [
   {
@@ -19,6 +20,13 @@ const projects = [
     description: "Full-featured token sale platform with integrated staking mechanism and earning rewards",
     tags: ["Solidity", "React", "Web3.js", "Rewards", "Token Sale"],
     image: ithThumbnail,
+    demoUrl: "https://dog-walker.io/",
+  },
+  {
+    title: "QDVI",
+    description: "Secure and streamlined token sale solution with wallet integration and real-time purchase tracking",
+    tags: ["Solidity", "Web3", "React", "Token Sale", "USDT"],
+    image: qdviThumbnail,
     demoUrl: "https://dog-walker.io/",
   },
 ];
