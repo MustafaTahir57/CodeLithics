@@ -9,6 +9,7 @@ import ithThumbnail from "@/assets/ith-thumbnail.png";
 import qdviThumbnail from "@/assets/qdvi-thumbnail.png";
 import tedaiThumbnail from "@/assets/tedai-thumbnail.png";
 import gridriderThumbnail from "@/assets/gridrider-thumbnail.png";
+import xenThumbnail from "@/assets/xen-thumbnail.png";
 
 const projects = [
   {
@@ -45,6 +46,13 @@ const projects = [
     tags: ["Gaming", "Web3", "React", "Solidity", "DApp"],
     image: gridriderThumbnail,
     demoUrl: "https://www.gridrider.io/",
+  },
+  {
+    title: "Xen",
+    description: "Complete token launchpad platform where raw ideas are transformed into high-performance tokens",
+    tags: ["Launchpad", "DeFi", "React", "Web3", "Token Launch"],
+    image: xenThumbnail,
+    demoUrl: "https://xen.trade/",
   },
 ];
 
