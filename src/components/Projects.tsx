@@ -13,6 +13,27 @@ import xenThumbnail from "@/assets/xen-thumbnail.png";
 
 const projects = [
   {
+    title: "GridRider",
+    description: "Engaging blockchain gaming platform featuring two fantastic games with competitive gameplay and rewards",
+    tags: ["Gaming", "Web3", "React", "Solidity", "DApp"],
+    image: gridriderThumbnail,
+    demoUrl: "https://www.gridrider.io/",
+  },
+  {
+    title: "TedAI",
+    description: "AI-powered chatbot meme coin with interactive conversational features and community engagement",
+    tags: ["AI", "React", "Web3", "Meme Coin", "Chatbot"],
+    image: tedaiThumbnail,
+    demoUrl: "https://dog-walker.io/",
+  },
+  {
+    title: "Xen",
+    description: "Complete token launchpad platform where raw ideas are transformed into high-performance tokens",
+    tags: ["Launchpad", "DeFi", "React", "Web3", "Token Launch"],
+    image: xenThumbnail,
+    demoUrl: "https://xen.trade/",
+  },
+  {
     title: "Dog-Walker",
     description: "A complete presale dapp with staking and reward features",
     tags: ["Solidity", "React", "Web3.js", "Staking", "Presale"],
@@ -32,27 +53,6 @@ const projects = [
     tags: ["Solidity", "Web3", "React", "Token Sale", "USDT"],
     image: qdviThumbnail,
     demoUrl: "https://dog-walker.io/",
-  },
-  {
-    title: "TedAI",
-    description: "AI-powered chatbot meme coin with interactive conversational features and community engagement",
-    tags: ["AI", "React", "Web3", "Meme Coin", "Chatbot"],
-    image: tedaiThumbnail,
-    demoUrl: "https://dog-walker.io/",
-  },
-  {
-    title: "GridRider",
-    description: "Engaging blockchain gaming platform featuring two fantastic games with competitive gameplay and rewards",
-    tags: ["Gaming", "Web3", "React", "Solidity", "DApp"],
-    image: gridriderThumbnail,
-    demoUrl: "https://www.gridrider.io/",
-  },
-  {
-    title: "Xen",
-    description: "Complete token launchpad platform where raw ideas are transformed into high-performance tokens",
-    tags: ["Launchpad", "DeFi", "React", "Web3", "Token Launch"],
-    image: xenThumbnail,
-    demoUrl: "https://xen.trade/",
   },
 ];
 
