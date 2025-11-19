@@ -1,6 +1,19 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { useState } from "react";
+import reviewSalvatorer from "@/assets/review-salvatorer.png";
+import reviewTexturehaven from "@/assets/review-texturehaven.png";
+import reviewBandyka77 from "@/assets/review-bandyka77.png";
 
 const testimonials = [
   {
@@ -8,18 +21,21 @@ const testimonials = [
     role: "Fiverr Client, Mali",
     content: "Honestly, I've worked with many developers in the blockchain space, but he truly stands out. He listens carefully, has incredible patience, and unlike many others, negotiating with him isn't a crime, he's genuinely open-minded in a world where everyone only talks about money. An absolute ace in his field. I recommend him to everyone. The true King of IT!",
     rating: 5,
+    screenshot: reviewSalvatorer,
   },
   {
     name: "texturehaven",
     role: "Fiverr Client, Netherlands",
     content: "Satisfied with the product, feedback is well received, and support continues until the final result is achieved",
     rating: 5,
+    screenshot: reviewTexturehaven,
   },
   {
     name: "bandyka77",
     role: "Fiverr Client, Hungary",
     content: "Despite the unexpected difficulties during development, the job was completed well and he went beyond the scope to get things sorted. This is what I would expect from a good developer who is looking to establish themselves for the long run. Well done.",
     rating: 5,
+    screenshot: reviewBandyka77,
   },
 ];
 
@@ -63,8 +79,35 @@ const Testimonials = () => {
                     ))}
                   </div>
                   <div className="border-t border-border pt-4">
-                    <p className="font-semibold text-foreground">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="font-semibold text-foreground">{testimonial.name}</p>
+                        <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                      </div>
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Button variant="outline" size="sm" className="gap-2">
+                            <ExternalLink className="w-3 h-3" />
+                            View Proof
+                          </Button>
+                        </DialogTrigger>
+                        <DialogContent className="max-w-4xl max-h-[90vh]">
+                          <DialogHeader>
+                            <DialogTitle>Fiverr Review - {testimonial.name}</DialogTitle>
+                            <DialogDescription>
+                              Original review screenshot from Fiverr
+                            </DialogDescription>
+                          </DialogHeader>
+                          <div className="overflow-auto">
+                            <img 
+                              src={testimonial.screenshot} 
+                              alt={`Review from ${testimonial.name}`}
+                              className="w-full h-auto rounded-lg"
+                            />
+                          </div>
+                        </DialogContent>
+                      </Dialog>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
