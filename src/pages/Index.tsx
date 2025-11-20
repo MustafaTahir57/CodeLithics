@@ -7,6 +7,7 @@ import Testimonials from "@/components/Testimonials";
 import TechStack from "@/components/TechStack";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { VideoUploader } from "@/components/VideoUploader";
 
 const Index = () => {
   return (
@@ -18,6 +19,13 @@ const Index = () => {
       <About />
       <Testimonials />
       <TechStack />
+      
+      <section id="video-upload" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <VideoUploader />
+        </div>
+      </section>
+      
       <Contact />
       <Footer />
     </div>
