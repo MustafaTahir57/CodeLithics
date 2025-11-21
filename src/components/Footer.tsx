@@ -1,5 +1,5 @@
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
-import codelithicsLogo from "@/assets/codelithics-logo-new.png";
+import codelithicsLogo from "@/assets/codelithics-logo.png";
 
 const Footer = () => {
   return (
