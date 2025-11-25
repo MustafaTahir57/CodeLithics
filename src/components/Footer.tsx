@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img src={codelithicsLogo} alt="CodeLithics Logo" className="h-28 w-auto" />
+              <img src={codelithicsLogo} alt="CodeLithics Logo" className="h-16 md:h-28 w-auto" />
             </div>
             <p className="text-muted-foreground text-sm">
               A Web3 & AI development studio led by Muhammad Mustafa Tahir.
