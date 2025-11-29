@@ -1,4 +1,5 @@
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { motion } from "framer-motion";
 import codelithicsLogo from "@/assets/codelithics-logo.png";
 
 const Footer = () => {
@@ -7,9 +8,15 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <div className="flex items-center gap-2 mb-4">
+            <motion.div 
+              className="flex items-center gap-2 mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
               <img src={codelithicsLogo} alt="CodeLithics Logo" className="h-16 md:h-28 w-auto" />
-            </div>
+            </motion.div>
             <p className="text-muted-foreground text-sm">
               A Web3 & AI development studio led by Muhammad Mustafa Tahir.
             </p>

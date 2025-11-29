@@ -41,9 +41,22 @@ const Navigation = () => {
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-24">
-            <div className="flex items-center gap-2">
-              <img src={codelithicsLogo} alt="CodeLithics Logo" className="h-16 md:h-28 w-auto" />
-            </div>
+            <motion.div 
+              className="flex items-center gap-2"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+            >
+              <motion.img 
+                src={codelithicsLogo} 
+                alt="CodeLithics Logo" 
+                className="h-16 md:h-28 w-auto"
+                animate={{ 
+                  scale: isScrolled ? 0.95 : 1,
+                }}
+                transition={{ duration: 0.3 }}
+              />
+            </motion.div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
