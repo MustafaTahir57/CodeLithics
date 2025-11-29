@@ -58,9 +58,8 @@ const Contact = () => {
 
     const templateParams = {
       name: formData.name,
-      senderEmail: formData.email,
+      email: formData.email,
       message: formData.message,
-      time: new Date().toLocaleString(),
       to_email: "contact@codelithics.com",
     };
 
