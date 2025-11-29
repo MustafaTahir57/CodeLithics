@@ -128,10 +128,11 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="flex justify-center"
           >
-            <Card className="bg-card border-border card-glow h-full">
+            <Card className="bg-card border-border card-glow h-full w-full">
               <CardContent className="pt-6">
-                <h3 className="text-2xl font-heading font-bold mb-6">Get in Touch</h3>
+                <h3 className="text-2xl font-heading font-bold mb-6 text-center md:text-left">Get in Touch</h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <Input
@@ -210,11 +211,11 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-6"
+            className="space-y-6 flex flex-col items-center md:items-stretch"
           >
-            <Card className="bg-card border-border card-glow">
+            <Card className="bg-card border-border card-glow w-full">
               <CardContent className="pt-6">
-                <h3 className="text-xl font-heading font-bold mb-4">Connect With Us</h3>
+                <h3 className="text-xl font-heading font-bold mb-4 text-center md:text-left">Connect With Us</h3>
                 <div className="space-y-3">
                   <a
                     href="mailto:contact@codelithics.com"
@@ -254,9 +255,9 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-primary p-1 card-glow">
+            <Card className="bg-gradient-primary p-1 card-glow w-full">
               <div className="bg-card rounded-lg p-6">
-                <h3 className="text-xl font-heading font-bold mb-3">Quick Response</h3>
+                <h3 className="text-xl font-heading font-bold mb-3 text-center md:text-left">Quick Response</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   We typically respond within 24 hours. For urgent inquiries, feel free to reach out directly via email or LinkedIn.
                 </p>
