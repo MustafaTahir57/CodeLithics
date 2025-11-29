@@ -87,7 +87,7 @@ const Footer = () => {
                 <Twitter className="w-5 h-5" />
               </a>
               <a
-                href="mailto:contact@web3agency.com"
+                href="mailto:contact@codelithics.com"
                 className="w-10 h-10 bg-card border border-border rounded-lg flex items-center justify-center hover:border-primary/50 transition-colors"
               >
                 <Mail className="w-5 h-5" />
