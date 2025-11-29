@@ -27,13 +27,14 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [captchaValue, setCaptchaValue] = useState<string | null>(null);
   const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrors({});
 
-    // Validate reCAPTCHA
-    if (!captchaValue) {
+    // Validate reCAPTCHA only if it's enabled
+    if (recaptchaSiteKey && !captchaValue) {
       setErrors({ captcha: "Please complete the reCAPTCHA verification" });
       toast({
         title: "Verification Required",
@@ -170,19 +171,27 @@ const Contact = () => {
                     />
                     {errors.message && <p className="text-destructive text-sm mt-1">{errors.message}</p>}
                   </div>
-                  <div>
-                    <ReCAPTCHA
-                      ref={recaptchaRef}
-                      sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY || ""}
-                      onChange={(value) => {
-                        setCaptchaValue(value);
-                        if (errors.captcha) setErrors({ ...errors, captcha: "" });
-                      }}
-                      onExpired={() => setCaptchaValue(null)}
-                      theme="dark"
-                    />
-                    {errors.captcha && <p className="text-destructive text-sm mt-1">{errors.captcha}</p>}
-                  </div>
+                  {recaptchaSiteKey ? (
+                    <div>
+                      <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey={recaptchaSiteKey}
+                        onChange={(value) => {
+                          setCaptchaValue(value);
+                          if (errors.captcha) setErrors({ ...errors, captcha: "" });
+                        }}
+                        onExpired={() => setCaptchaValue(null)}
+                        theme="dark"
+                      />
+                      {errors.captcha && <p className="text-destructive text-sm mt-1">{errors.captcha}</p>}
+                    </div>
+                  ) : (
+                    <div className="bg-muted/50 border border-border rounded-lg p-4">
+                      <p className="text-muted-foreground text-sm">
+                        ⚠️ reCAPTCHA not configured. Add VITE_RECAPTCHA_SITE_KEY to your .env file.
+                      </p>
+                    </div>
+                  )}
                   <Button
                     type="submit"
                     disabled={loading}
