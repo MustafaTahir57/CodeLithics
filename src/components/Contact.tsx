@@ -6,6 +6,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Github, Linkedin, Twitter, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { z } from "zod";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().min(1, "Email is required").email("Please enter a valid email address").max(255, "Email must be less than 255 characters"),
+  message: z.string().trim().min(1, "Message is required").max(1000, "Message must be less than 1000 characters"),
+});
 
 const Contact = () => {
   const { toast } = useToast();
@@ -14,14 +22,68 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message sent! 🚀",
-      description: "We'll get back to you within 24 hours.",
-    });
-    setFormData({ name: "", email: "", message: "" });
+    setErrors({});
+
+    // Validate form data
+    const validation = contactSchema.safeParse(formData);
+    
+    if (!validation.success) {
+      const fieldErrors: { [key: string]: string } = {};
+      validation.error.errors.forEach((error) => {
+        if (error.path[0]) {
+          fieldErrors[error.path[0].toString()] = error.message;
+        }
+      });
+      setErrors(fieldErrors);
+      return;
+    }
+
+    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+      toast({
+        title: "Configuration Error",
+        description: "Email service is not configured. Please contact the administrator.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    const templateParams = {
+      name: formData.name,
+      senderEmail: formData.email,
+      message: formData.message,
+      time: new Date().toLocaleString(),
+      to_email: "contact@codelithics.com",
+    };
+
+    try {
+      setLoading(true);
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
+      
+      toast({
+        title: "Message sent! 🚀",
+        description: "We'll get back to you within 24 hours.",
+      });
+      
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Email failed:", error);
+      toast({
+        title: "Failed to send message",
+        description: "Please try again later or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -59,36 +121,46 @@ const Contact = () => {
                     <Input
                       placeholder="Your Name"
                       value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      required
-                      className="bg-secondary border-border focus:border-primary"
+                      onChange={(e) => {
+                        setFormData({ ...formData, name: e.target.value });
+                        if (errors.name) setErrors({ ...errors, name: "" });
+                      }}
+                      className={`bg-secondary border-border focus:border-primary ${errors.name ? "border-destructive" : ""}`}
                     />
+                    {errors.name && <p className="text-destructive text-sm mt-1">{errors.name}</p>}
                   </div>
                   <div>
                     <Input
                       type="email"
                       placeholder="Your Email"
                       value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      required
-                      className="bg-secondary border-border focus:border-primary"
+                      onChange={(e) => {
+                        setFormData({ ...formData, email: e.target.value });
+                        if (errors.email) setErrors({ ...errors, email: "" });
+                      }}
+                      className={`bg-secondary border-border focus:border-primary ${errors.email ? "border-destructive" : ""}`}
                     />
+                    {errors.email && <p className="text-destructive text-sm mt-1">{errors.email}</p>}
                   </div>
                   <div>
                     <Textarea
                       placeholder="Tell us about your project..."
                       value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      required
+                      onChange={(e) => {
+                        setFormData({ ...formData, message: e.target.value });
+                        if (errors.message) setErrors({ ...errors, message: "" });
+                      }}
                       rows={5}
-                      className="bg-secondary border-border focus:border-primary resize-none"
+                      className={`bg-secondary border-border focus:border-primary resize-none ${errors.message ? "border-destructive" : ""}`}
                     />
+                    {errors.message && <p className="text-destructive text-sm mt-1">{errors.message}</p>}
                   </div>
                   <Button
                     type="submit"
+                    disabled={loading}
                     className="w-full bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity glow-effect"
                   >
-                    Send Message
+                    {loading ? "Sending..." : "Send Message"}
                     <Send className="ml-2 w-4 h-4" />
                   </Button>
                 </form>
