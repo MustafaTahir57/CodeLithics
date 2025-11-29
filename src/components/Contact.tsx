@@ -122,15 +122,15 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-start">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex justify-center"
+            className="w-full flex justify-center md:justify-start"
           >
-            <Card className="bg-card border-border card-glow h-full w-full">
+            <Card className="bg-card border-border card-glow h-full w-full max-w-md md:max-w-none">
               <CardContent className="pt-6">
                 <h3 className="text-2xl font-heading font-bold mb-6 text-center md:text-left">Get in Touch</h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -211,9 +211,9 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-6 flex flex-col items-center md:items-stretch"
+            className="w-full space-y-6 flex flex-col items-center md:items-stretch"
           >
-            <Card className="bg-card border-border card-glow w-full">
+            <Card className="bg-card border-border card-glow w-full max-w-md md:max-w-none mx-auto md:mx-0">
               <CardContent className="pt-6">
                 <h3 className="text-xl font-heading font-bold mb-4 text-center md:text-left">Connect With Us</h3>
                 <div className="space-y-3">
@@ -255,7 +255,7 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-primary p-1 card-glow w-full">
+            <Card className="bg-gradient-primary p-1 card-glow w-full max-w-md md:max-w-none mx-auto md:mx-0">
               <div className="bg-card rounded-lg p-6">
                 <h3 className="text-xl font-heading font-bold mb-3 text-center md:text-left">Quick Response</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
