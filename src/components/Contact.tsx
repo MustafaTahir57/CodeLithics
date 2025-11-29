@@ -108,11 +108,11 @@ const Contact = () => {
                 <h3 className="text-xl font-heading font-bold mb-4">Connect With Us</h3>
                 <div className="space-y-3">
                   <a
-                    href="mailto:contact@web3agency.com"
+                    href="mailto:contact@codelithics.com"
                     className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors p-3 rounded-lg hover:bg-secondary/50"
                   >
                     <Mail className="w-5 h-5" />
-                    <span>contact@web3agency.com</span>
+                    <span>contact@codelithics.com</span>
                   </a>
                   <a
                     href="https://github.com"
