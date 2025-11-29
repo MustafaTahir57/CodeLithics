@@ -5,9 +5,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Github, Linkedin, Twitter, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { z } from "zod";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
@@ -24,10 +25,23 @@ const Contact = () => {
   });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [loading, setLoading] = useState(false);
+  const [captchaValue, setCaptchaValue] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrors({});
+
+    // Validate reCAPTCHA
+    if (!captchaValue) {
+      setErrors({ captcha: "Please complete the reCAPTCHA verification" });
+      toast({
+        title: "Verification Required",
+        description: "Please complete the reCAPTCHA verification to continue.",
+        variant: "destructive",
+      });
+      return;
+    }
 
     // Validate form data
     const validation = contactSchema.safeParse(formData);
@@ -73,6 +87,8 @@ const Contact = () => {
       });
       
       setFormData({ name: "", email: "", message: "" });
+      setCaptchaValue(null);
+      recaptchaRef.current?.reset();
     } catch (error) {
       console.error("Email failed:", error);
       toast({
@@ -153,6 +169,19 @@ const Contact = () => {
                       className={`bg-secondary border-border focus:border-primary resize-none ${errors.message ? "border-destructive" : ""}`}
                     />
                     {errors.message && <p className="text-destructive text-sm mt-1">{errors.message}</p>}
+                  </div>
+                  <div>
+                    <ReCAPTCHA
+                      ref={recaptchaRef}
+                      sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY || ""}
+                      onChange={(value) => {
+                        setCaptchaValue(value);
+                        if (errors.captcha) setErrors({ ...errors, captcha: "" });
+                      }}
+                      onExpired={() => setCaptchaValue(null)}
+                      theme="dark"
+                    />
+                    {errors.captcha && <p className="text-destructive text-sm mt-1">{errors.captcha}</p>}
                   </div>
                   <Button
                     type="submit"
