@@ -1,6 +1,6 @@
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 import { motion } from "framer-motion";
-import codelithicsLogo from "@/assets/codelithics-logo.png";
+import codelithicsLogo from "@/assets/codelithics-logo-digital.png";
 
 const Footer = () => {
   return (
