@@ -172,6 +172,7 @@ const Contact = () => {
                     {errors.message && <p className="text-destructive text-sm mt-1">{errors.message}</p>}
                   </div>
 
+                  {recaptchaSiteKey && (
                     <div className="scale-[0.75] origin-left sm:scale-100">
                       <ReCAPTCHA
                         ref={recaptchaRef}
@@ -185,6 +186,7 @@ const Contact = () => {
                       />
                       {errors.captcha && <p className="text-destructive text-sm mt-1">{errors.captcha}</p>}
                     </div>
+                  )}
                   
                   <Button
                     type="submit"
