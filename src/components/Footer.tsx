@@ -15,7 +15,7 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
-              <img src={codelithicsLogo} alt="CodeLithics Logo" className="h-16 md:h-28 w-auto" />
+              <img src={codelithicsLogo} alt="CodeLithics Logo" className="h-20 md:h-32 w-auto" />
             </motion.div>
             <p className="text-muted-foreground text-sm">
               A Web3 & AI development studio led by Muhammad Mustafa Tahir.
