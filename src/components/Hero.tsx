@@ -5,68 +5,81 @@ import { ArrowRight, Sparkles } from "lucide-react";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-hero-light">
-      {/* Subtle Pattern Background */}
+      {/* Blockchain Network Background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <div 
-          className="absolute inset-0 opacity-30"
-          style={{
-            backgroundImage: `
-              linear-gradient(hsl(var(--primary) / 0.08) 1px, transparent 1px),
-              linear-gradient(90deg, hsl(var(--primary) / 0.08) 1px, transparent 1px)
-            `,
-            backgroundSize: '50px 50px',
-            animation: 'grid-move 20s linear infinite',
-          }}
-        />
+        <svg className="absolute inset-0 w-full h-full opacity-[0.06]" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="blockchain-grid" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+              <circle cx="50" cy="50" r="2" fill="hsl(var(--primary))" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#blockchain-grid)" />
+        </svg>
+        
+        {/* Animated connection lines */}
+        <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          {[...Array(8)].map((_, i) => (
+            <motion.line
+              key={i}
+              x1={`${10 + i * 12}%`}
+              y1={`${20 + (i % 3) * 25}%`}
+              x2={`${20 + i * 10}%`}
+              y2={`${40 + (i % 4) * 15}%`}
+              stroke="hsl(var(--primary))"
+              strokeWidth="1"
+              opacity="0.05"
+              initial={{ pathLength: 0, opacity: 0 }}
+              animate={{ 
+                pathLength: [0, 1, 1, 0], 
+                opacity: [0, 0.08, 0.08, 0] 
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                delay: i * 0.5,
+                ease: "easeInOut"
+              }}
+            />
+          ))}
+        </svg>
       </div>
 
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary-glow/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-accent/5 rounded-full blur-2xl animate-float" style={{ animationDelay: '4s' }} />
-      </div>
-
-      {/* Floating Particles */}
-      <div className="absolute inset-0 z-0">
-        {[...Array(20)].map((_, i) => (
+      {/* Floating Blockchain Nodes */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        {[...Array(6)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-primary/20 rounded-full"
+            className="absolute"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: `${15 + i * 15}%`,
+              top: `${20 + (i % 3) * 25}%`,
             }}
             animate={{
-              y: [0, -30, 0],
-              opacity: [0.2, 0.4, 0.2],
-              scale: [1, 1.5, 1],
+              y: [0, -15, 0],
+              opacity: [0.04, 0.08, 0.04],
             }}
             transition={{
-              duration: 3 + Math.random() * 2,
+              duration: 5 + i,
               repeat: Infinity,
-              delay: Math.random() * 2,
+              delay: i * 0.8,
             }}
-          />
+          >
+            <div className="w-3 h-3 border border-primary/20 rotate-45" />
+          </motion.div>
         ))}
       </div>
 
-      {/* Geometric Shapes */}
+      {/* Soft Gradient Orbs */}
       <div className="absolute inset-0 z-0">
-        <motion.div
-          className="absolute top-20 left-10 w-20 h-20 border border-primary/10"
-          animate={{ rotate: 360 }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        <motion.div 
+          className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px]"
+          animate={{ scale: [1, 1.1, 1], opacity: [0.05, 0.08, 0.05] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
-        <motion.div
-          className="absolute bottom-40 right-20 w-16 h-16 border border-secondary-glow/10"
-          animate={{ rotate: -360 }}
-          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-        />
-        <motion.div
-          className="absolute top-1/3 right-1/4 w-12 h-12 border-2 border-accent/10 rotate-45"
-          animate={{ y: [0, -20, 0] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        <motion.div 
+          className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-secondary-glow/5 rounded-full blur-[80px]"
+          animate={{ scale: [1, 1.15, 1], opacity: [0.04, 0.07, 0.04] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
         />
       </div>
 
