@@ -65,8 +65,8 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto"
         >
-          <Card className="bg-primary/5 border-0 shadow-lg shadow-primary/10 rounded-xl">
-            <div className="p-8 md:p-12">
+          <Card className="bg-gradient-primary p-1 card-glow">
+            <div className="bg-card rounded-lg p-8 md:p-12">
               <h3 className="text-2xl md:text-3xl font-heading font-bold mb-6 text-center">
                 Why Choose Us?
               </h3>
