@@ -5,151 +5,70 @@ import { ArrowRight, Sparkles } from "lucide-react";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-hero-light">
-      {/* Soft Radial Gradient Overlay */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_hsl(var(--primary)/0.08)_0%,_transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_hsl(var(--primary)/0.05)_0%,_transparent_40%)]" />
-      </div>
-
-      {/* Subtle Grid Pattern */}
+      {/* Subtle Pattern Background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div 
-          className="absolute inset-0 opacity-40"
+          className="absolute inset-0 opacity-30"
           style={{
             backgroundImage: `
-              linear-gradient(hsl(var(--primary) / 0.06) 1px, transparent 1px),
-              linear-gradient(90deg, hsl(var(--primary) / 0.06) 1px, transparent 1px)
+              linear-gradient(hsl(var(--primary) / 0.08) 1px, transparent 1px),
+              linear-gradient(90deg, hsl(var(--primary) / 0.08) 1px, transparent 1px)
             `,
-            backgroundSize: '60px 60px',
-            animation: 'grid-move 25s linear infinite',
+            backgroundSize: '50px 50px',
+            animation: 'grid-move 20s linear infinite',
           }}
         />
       </div>
 
-      {/* Large Soft Gradient Orbs */}
+      {/* Animated Background Elements */}
       <div className="absolute inset-0 z-0">
-        <motion.div 
-          className="absolute -top-20 -left-20 w-[500px] h-[500px] bg-primary/8 rounded-full blur-[100px]"
-          animate={{ 
-            scale: [1, 1.1, 1],
-            opacity: [0.08, 0.12, 0.08],
-          }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div 
-          className="absolute -bottom-32 -right-32 w-[600px] h-[600px] bg-primary/6 rounded-full blur-[120px]"
-          animate={{ 
-            scale: [1.1, 1, 1.1],
-            opacity: [0.06, 0.1, 0.06],
-          }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[80px]"
-          animate={{ 
-            scale: [1, 1.2, 1],
-          }}
-          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-        />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary-glow/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-accent/5 rounded-full blur-2xl animate-float" style={{ animationDelay: '4s' }} />
       </div>
 
-      {/* Floating Hexagonal Shapes */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <motion.div
-          className="absolute top-[15%] left-[10%] w-24 h-24 border border-primary/10 rotate-12"
-          style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
-          animate={{ 
-            rotate: [12, 24, 12],
-            y: [0, -15, 0],
-          }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute top-[20%] right-[15%] w-16 h-16 border border-primary/8"
-          animate={{ 
-            rotate: 360,
-            scale: [1, 1.1, 1],
-          }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        />
-        <motion.div
-          className="absolute bottom-[25%] left-[20%] w-20 h-20 border border-primary/6 rotate-45"
-          animate={{ 
-            rotate: [45, 135, 45],
-          }}
-          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute bottom-[30%] right-[10%] w-14 h-14 border-2 border-primary/10 rounded-full"
-          animate={{ 
-            scale: [1, 1.3, 1],
-            opacity: [0.1, 0.2, 0.1],
-          }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-        />
-      </div>
-
-      {/* Floating Dots/Particles */}
+      {/* Floating Particles */}
       <div className="absolute inset-0 z-0">
-        {[...Array(30)].map((_, i) => (
+        {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1.5 h-1.5 bg-primary/15 rounded-full"
+            className="absolute w-1 h-1 bg-primary/20 rounded-full"
             style={{
-              left: `${10 + Math.random() * 80}%`,
-              top: `${10 + Math.random() * 80}%`,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
             }}
             animate={{
-              y: [0, -20, 0],
-              x: [0, Math.random() > 0.5 ? 10 : -10, 0],
-              opacity: [0.1, 0.25, 0.1],
-              scale: [1, 1.3, 1],
+              y: [0, -30, 0],
+              opacity: [0.2, 0.4, 0.2],
+              scale: [1, 1.5, 1],
             }}
             transition={{
-              duration: 4 + Math.random() * 3,
+              duration: 3 + Math.random() * 2,
               repeat: Infinity,
-              delay: Math.random() * 3,
-              ease: "easeInOut",
+              delay: Math.random() * 2,
             }}
           />
         ))}
       </div>
 
-      {/* Connecting Lines Effect */}
-      <svg className="absolute inset-0 w-full h-full z-0 opacity-20">
-        <motion.line 
-          x1="10%" y1="20%" x2="30%" y2="40%" 
-          stroke="hsl(var(--primary))" 
-          strokeWidth="0.5"
-          initial={{ pathLength: 0, opacity: 0 }}
-          animate={{ pathLength: 1, opacity: 0.3 }}
-          transition={{ duration: 2, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+      {/* Geometric Shapes */}
+      <div className="absolute inset-0 z-0">
+        <motion.div
+          className="absolute top-20 left-10 w-20 h-20 border border-primary/10"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         />
-        <motion.line 
-          x1="70%" y1="15%" x2="85%" y2="35%" 
-          stroke="hsl(var(--primary))" 
-          strokeWidth="0.5"
-          initial={{ pathLength: 0, opacity: 0 }}
-          animate={{ pathLength: 1, opacity: 0.25 }}
-          transition={{ duration: 3, delay: 1, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+        <motion.div
+          className="absolute bottom-40 right-20 w-16 h-16 border border-secondary-glow/10"
+          animate={{ rotate: -360 }}
+          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
         />
-        <motion.line 
-          x1="20%" y1="70%" x2="40%" y2="85%" 
-          stroke="hsl(var(--primary))" 
-          strokeWidth="0.5"
-          initial={{ pathLength: 0, opacity: 0 }}
-          animate={{ pathLength: 1, opacity: 0.2 }}
-          transition={{ duration: 2.5, delay: 0.5, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+        <motion.div
+          className="absolute top-1/3 right-1/4 w-12 h-12 border-2 border-accent/10 rotate-45"
+          animate={{ y: [0, -20, 0] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
-        <motion.line 
-          x1="60%" y1="65%" x2="80%" y2="80%" 
-          stroke="hsl(var(--primary))" 
-          strokeWidth="0.5"
-          initial={{ pathLength: 0, opacity: 0 }}
-          animate={{ pathLength: 1, opacity: 0.25 }}
-          transition={{ duration: 2.8, delay: 1.5, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-        />
-      </svg>
+      </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 z-10 text-center">
