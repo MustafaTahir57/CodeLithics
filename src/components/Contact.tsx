@@ -182,7 +182,7 @@ const Contact = () => {
                           if (errors.captcha) setErrors({ ...errors, captcha: "" });
                         }}
                         onExpired={() => setCaptchaValue(null)}
-                        theme="dark"
+                        theme="light"
                       />
                       {errors.captcha && <p className="text-destructive text-sm mt-1">{errors.captcha}</p>}
                     </div>

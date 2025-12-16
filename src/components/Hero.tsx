@@ -1,29 +1,18 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src={heroBg} 
-          alt="Web3 Background" 
-          className="w-full h-full object-cover opacity-40"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
-      </div>
-
-      {/* Animated Grid Background */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-hero-light">
+      {/* Subtle Pattern Background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div 
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0 opacity-30"
           style={{
             backgroundImage: `
-              linear-gradient(hsl(var(--primary) / 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, hsl(var(--primary) / 0.1) 1px, transparent 1px)
+              linear-gradient(hsl(var(--primary) / 0.08) 1px, transparent 1px),
+              linear-gradient(90deg, hsl(var(--primary) / 0.08) 1px, transparent 1px)
             `,
             backgroundSize: '50px 50px',
             animation: 'grid-move 20s linear infinite',
@@ -33,9 +22,9 @@ const Hero = () => {
 
       {/* Animated Background Elements */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary-glow/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-accent/10 rounded-full blur-2xl animate-float" style={{ animationDelay: '4s' }} />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary-glow/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-accent/5 rounded-full blur-2xl animate-float" style={{ animationDelay: '4s' }} />
       </div>
 
       {/* Floating Particles */}
@@ -43,14 +32,14 @@ const Hero = () => {
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-primary/30 rounded-full"
+            className="absolute w-1 h-1 bg-primary/20 rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
             }}
             animate={{
               y: [0, -30, 0],
-              opacity: [0.2, 0.5, 0.2],
+              opacity: [0.2, 0.4, 0.2],
               scale: [1, 1.5, 1],
             }}
             transition={{
@@ -65,17 +54,17 @@ const Hero = () => {
       {/* Geometric Shapes */}
       <div className="absolute inset-0 z-0">
         <motion.div
-          className="absolute top-20 left-10 w-20 h-20 border border-primary/20"
+          className="absolute top-20 left-10 w-20 h-20 border border-primary/10"
           animate={{ rotate: 360 }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         />
         <motion.div
-          className="absolute bottom-40 right-20 w-16 h-16 border border-secondary-glow/20"
+          className="absolute bottom-40 right-20 w-16 h-16 border border-secondary-glow/10"
           animate={{ rotate: -360 }}
           transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
         />
         <motion.div
-          className="absolute top-1/3 right-1/4 w-12 h-12 border-2 border-accent/20 rotate-45"
+          className="absolute top-1/3 right-1/4 w-12 h-12 border-2 border-accent/10 rotate-45"
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />

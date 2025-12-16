@@ -8,48 +8,48 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Dark futuristic theme - Web3 agency */
-    --background: 240 10% 4%;
-    --foreground: 210 40% 98%;
+    /* Light theme - Codelithics Blue (#4144F2) + Black */
+    --background: 220 30% 98%;
+    --foreground: 220 20% 10%;
 
-    --card: 240 8% 8%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
 
-    --popover: 240 8% 8%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
 
-    /* Electric purple-blue gradient colors */
-    --primary: 262 83% 58%;
-    --primary-foreground: 210 40% 98%;
+    /* Codelithics Blue as primary */
+    --primary: 239 88% 60%;
+    --primary-foreground: 0 0% 100%;
     
-    --primary-glow: 280 90% 70%;
-    --secondary-glow: 220 90% 60%;
+    --primary-glow: 239 88% 70%;
+    --secondary-glow: 239 70% 55%;
 
-    --secondary: 240 6% 12%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 20% 94%;
+    --secondary-foreground: 220 20% 10%;
 
-    --muted: 240 5% 15%;
-    --muted-foreground: 240 5% 65%;
+    --muted: 220 15% 92%;
+    --muted-foreground: 220 10% 45%;
 
-    --accent: 262 83% 58%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 239 88% 60%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 240 6% 18%;
-    --input: 240 6% 18%;
-    --ring: 262 83% 58%;
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 239 88% 60%;
 
     --radius: 0.75rem;
 
     /* Gradient definitions */
-    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(220 90% 60%) 100%);
-    --gradient-glow: linear-gradient(135deg, hsl(280 90% 70% / 0.2) 0%, hsl(220 90% 60% / 0.2) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(239 88% 60%) 0%, hsl(239 70% 50%) 100%);
+    --gradient-glow: linear-gradient(135deg, hsl(239 88% 60% / 0.1) 0%, hsl(239 70% 55% / 0.1) 100%);
     
-    /* Shadows and glows */
-    --shadow-glow: 0 0 40px hsl(262 83% 58% / 0.3), 0 0 80px hsl(220 90% 60% / 0.2);
-    --shadow-card: 0 10px 40px -10px hsl(262 83% 58% / 0.2);
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(239 88% 60% / 0.15), 0 0 80px hsl(239 70% 55% / 0.1);
+    --shadow-card: 0 10px 40px -10px hsl(220 20% 10% / 0.08);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -73,7 +73,7 @@ All colors MUST be HSL.
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary-glow to-secondary-glow;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary-glow;
   }
   
   .glow-effect {
@@ -82,6 +82,10 @@ All colors MUST be HSL.
   
   .card-glow {
     box-shadow: var(--shadow-card);
+  }
+  
+  .bg-hero-light {
+    background: linear-gradient(135deg, hsl(220 30% 98%) 0%, hsl(239 88% 60% / 0.05) 50%, hsl(220 30% 96%) 100%);
   }
 }
 

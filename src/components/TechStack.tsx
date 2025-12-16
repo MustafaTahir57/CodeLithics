@@ -62,7 +62,7 @@ const TechStack = () => {
                 key={`first-${tech.name}-${index}`}
                 className="flex-shrink-0 mx-6 group"
               >
-                <div className="w-24 h-24 bg-gradient-to-br from-primary/10 via-card to-secondary-glow/10 border border-border rounded-2xl flex items-center justify-center transition-all duration-300 card-glow p-4 group-hover:scale-110 group-hover:border-primary/50 group-hover:shadow-[0_0_30px_rgba(168,85,247,0.4)]">
+                <div className="w-24 h-24 bg-card border border-border rounded-2xl flex items-center justify-center transition-all duration-300 shadow-md p-4 group-hover:scale-110 group-hover:border-primary/50 group-hover:shadow-lg">
                   <img 
                     src={tech.icon} 
                     alt={tech.name} 
@@ -80,7 +80,7 @@ const TechStack = () => {
                 key={`second-${tech.name}-${index}`}
                 className="flex-shrink-0 mx-6 group"
               >
-                <div className="w-24 h-24 bg-gradient-to-br from-primary/10 via-card to-secondary-glow/10 border border-border rounded-2xl flex items-center justify-center transition-all duration-300 card-glow p-4 group-hover:scale-110 group-hover:border-primary/50 group-hover:shadow-[0_0_30px_rgba(168,85,247,0.4)]">
+                <div className="w-24 h-24 bg-card border border-border rounded-2xl flex items-center justify-center transition-all duration-300 shadow-md p-4 group-hover:scale-110 group-hover:border-primary/50 group-hover:shadow-lg">
                   <img 
                     src={tech.icon} 
                     alt={tech.name} 
