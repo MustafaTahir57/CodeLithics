@@ -51,7 +51,7 @@ const Navigation = () => {
               <motion.img 
                 src={codelithicsLogo} 
                 alt="CodeLithics Logo" 
-                className="h-[5rem] md:h-24 w-auto"
+                className="h-10 md:h-12 w-auto"
                 animate={{ 
                   scale: isScrolled ? 0.95 : 1,
                 }}
