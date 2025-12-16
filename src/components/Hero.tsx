@@ -7,7 +7,7 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-hero-light">
       {/* Blockchain Network Background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <svg className="absolute inset-0 w-full h-full opacity-[0.06]" xmlns="http://www.w3.org/2000/svg">
+        <svg className="absolute inset-0 w-full h-full opacity-[0.15]" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="blockchain-grid" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
               <circle cx="50" cy="50" r="2" fill="hsl(var(--primary))" />
@@ -27,11 +27,11 @@ const Hero = () => {
               y2={`${40 + (i % 4) * 15}%`}
               stroke="hsl(var(--primary))"
               strokeWidth="1"
-              opacity="0.05"
+              opacity="0.12"
               initial={{ pathLength: 0, opacity: 0 }}
               animate={{ 
                 pathLength: [0, 1, 1, 0], 
-                opacity: [0, 0.08, 0.08, 0] 
+                opacity: [0, 0.2, 0.2, 0] 
               }}
               transition={{
                 duration: 4,
@@ -56,7 +56,7 @@ const Hero = () => {
             }}
             animate={{
               y: [0, -15, 0],
-              opacity: [0.04, 0.08, 0.04],
+              opacity: [0.12, 0.25, 0.12],
             }}
             transition={{
               duration: 5 + i,
@@ -64,7 +64,7 @@ const Hero = () => {
               delay: i * 0.8,
             }}
           >
-            <div className="w-3 h-3 border border-primary/20 rotate-45" />
+            <div className="w-3 h-3 border border-primary/40 rotate-45" />
           </motion.div>
         ))}
       </div>
@@ -72,13 +72,13 @@ const Hero = () => {
       {/* Soft Gradient Orbs */}
       <div className="absolute inset-0 z-0">
         <motion.div 
-          className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px]"
-          animate={{ scale: [1, 1.1, 1], opacity: [0.05, 0.08, 0.05] }}
+          className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/15 rounded-full blur-[100px]"
+          animate={{ scale: [1, 1.1, 1], opacity: [0.15, 0.25, 0.15] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div 
-          className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-secondary-glow/5 rounded-full blur-[80px]"
-          animate={{ scale: [1, 1.15, 1], opacity: [0.04, 0.07, 0.04] }}
+          className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-secondary-glow/15 rounded-full blur-[80px]"
+          animate={{ scale: [1, 1.15, 1], opacity: [0.12, 0.2, 0.12] }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
         />
       </div>
