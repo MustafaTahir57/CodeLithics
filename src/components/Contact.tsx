@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Github, Linkedin, Twitter, Send } from "lucide-react";
+import { Mail, Github, Linkedin, Instagram, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
@@ -220,7 +220,7 @@ const Contact = () => {
                     <span>contact@codelithics.com</span>
                   </a>
                   <a
-                    href="https://github.com"
+                    href="https://github.com/MustafaTahir57"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors p-3 rounded-lg hover:bg-secondary/50"
@@ -229,7 +229,7 @@ const Contact = () => {
                     <span>GitHub</span>
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/company/codelithics/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors p-3 rounded-lg hover:bg-secondary/50"
@@ -238,13 +238,13 @@ const Contact = () => {
                     <span>LinkedIn</span>
                   </a>
                   <a
-                    href="https://twitter.com"
+                    href="https://www.instagram.com/codelithics/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors p-3 rounded-lg hover:bg-secondary/50"
                   >
-                    <Twitter className="w-5 h-5" />
-                    <span>Twitter/X</span>
+                    <Instagram className="w-5 h-5" />
+                    <span>Instagram</span>
                   </a>
                 </div>
               </CardContent>
