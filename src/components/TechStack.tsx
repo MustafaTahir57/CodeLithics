@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import ethereumLogo from "@/assets/ethereum-logo.png";
 import ipfsLogo from "@/assets/ipfs-logo.png";
+import chainLink from "@/assets/chainlink.svg"
 
 const technologies = [
   // Smart Contracts
@@ -13,8 +14,7 @@ const technologies = [
   // Web3 & DeFi
   { name: "Web3.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/web3js/web3js-original.svg" },
   { name: "Ethers.js", icon: "https://docs.ethers.org/v5/static/logo.svg" },
-  { name: "Chainlink", icon: "https://avatars.githubusercontent.com/u/7078854?s=200&v=4" },
-  { name: "Moralis", icon: "https://avatars.githubusercontent.com/u/62961448?s=200&v=4" },
+  { name: "Chainlink", icon: chainLink },
   { name: "IPFS", icon: ipfsLogo },
   
   // Web Development
