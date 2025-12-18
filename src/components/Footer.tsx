@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Github, Linkedin, Instagram, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import codelithicsLogo from "@/assets/codeLithics.svg";
 
@@ -63,7 +63,7 @@ const Footer = () => {
             <h3 className="font-heading font-semibold mb-4">Connect</h3>
             <div className="flex gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/MustafaTahir57"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-card border border-border rounded-lg flex items-center justify-center hover:border-primary/50 transition-colors"
@@ -71,7 +71,7 @@ const Footer = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/codelithics/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-card border border-border rounded-lg flex items-center justify-center hover:border-primary/50 transition-colors"
@@ -79,12 +79,12 @@ const Footer = () => {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://www.instagram.com/codelithics/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-card border border-border rounded-lg flex items-center justify-center hover:border-primary/50 transition-colors"
               >
-                <Twitter className="w-5 h-5" />
+                <Instagram className="w-5 h-5" />
               </a>
               <a
                 href="mailto:contact@codelithics.com"
