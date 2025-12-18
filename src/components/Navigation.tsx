@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-// import codelithicsLogo from "@/assets/codelithics-logo-digital.png";
-import codelithicsLogo from "@/assets/codelithicsTest.png"
+import codelithicsLogo from "@/assets/codeLithics.svg"
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -51,7 +50,7 @@ const Navigation = () => {
               <motion.img 
                 src={codelithicsLogo} 
                 alt="CodeLithics Logo" 
-                className="h-10 md:h-8 w-32"
+                className="h-7 md:h-8 w-auto"
                 animate={{ 
                   scale: isScrolled ? 0.95 : 1,
                 }}
