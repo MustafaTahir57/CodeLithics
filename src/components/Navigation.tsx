@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import codelithicsLogo from "@/assets/codeLithics.svg"
+import AnimatedLogo from "@/components/AnimatedLogo";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,26 +36,20 @@ const Navigation = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "bg-background/80 backdrop-blur-lg border-b border-border" : "bg-transparent"
+          isScrolled
+            ? "bg-background/80 backdrop-blur-lg border-b border-border"
+            : "bg-transparent"
         }`}
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-24">
-            <motion.div 
+            <motion.div
               className="flex items-center gap-2"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
             >
-              <motion.img 
-                src={codelithicsLogo} 
-                alt="CodeLithics Logo" 
-                className="h-7 md:h-8 w-auto"
-                animate={{ 
-                  scale: isScrolled ? 0.95 : 1,
-                }}
-                transition={{ duration: 0.3 }}
-              />
+              <AnimatedLogo className="h-7 md:h-8 w-auto" />
             </motion.div>
 
             {/* Desktop Navigation */}
@@ -82,7 +76,11 @@ const Navigation = () => {
               className="md:hidden text-foreground"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
