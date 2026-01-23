@@ -24,7 +24,7 @@ const projects = [
     description: "AI-powered chatbot meme coin with interactive conversational features and community engagement",
     tags: ["AI", "React", "Web3", "Meme Coin", "Chatbot"],
     image: tedaiThumbnail,
-    demoUrl: "https://dog-walker.io/",
+    demoUrl: "https://tedai.io/",
   },
   {
     title: "Xen",
@@ -45,14 +45,14 @@ const projects = [
     description: "Full-featured token sale platform with integrated staking mechanism and earning rewards",
     tags: ["Solidity", "React", "Web3.js", "Rewards", "Token Sale"],
     image: ithThumbnail,
-    demoUrl: "https://dog-walker.io/",
+    demoUrl: "https://inthehouse.io/",
   },
   {
     title: "QDVI",
     description: "Secure and streamlined token sale solution with wallet integration and real-time purchase tracking",
     tags: ["Solidity", "Web3", "React", "Token Sale", "USDT"],
     image: qdviThumbnail,
-    demoUrl: "https://dog-walker.io/",
+    demoUrl: "https://qdvi.net/",
   },
 ];
 
