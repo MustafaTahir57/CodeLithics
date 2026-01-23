@@ -10,8 +10,16 @@ import qdviThumbnail from "@/assets/qdvi-thumbnail.png";
 import tedaiThumbnail from "@/assets/tedai-thumbnail.png";
 import gridriderThumbnail from "@/assets/gridrider-thumbnail.png";
 import xenThumbnail from "@/assets/xen-thumbnail.png";
+import certiqasThumbnail from "@/assets/certiqas-thumbnail.png";
 
 const projects = [
+  {
+    title: "Certiqas",
+    description: "End-to-end Real Estate NFT Marketplace MVP featuring role-based Admin and User dashboards with property submission, verification, and NFT minting",
+    tags: ["React", "Node.js", "Wagmi", "IPFS", "NFT", "Web3"],
+    image: certiqasThumbnail,
+    demoUrl: "https://stg.certiqas.io/",
+  },
   {
     title: "GridRider",
     description: "Engaging blockchain gaming platform featuring two fantastic games with competitive gameplay and rewards",
