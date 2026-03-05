@@ -11,8 +11,16 @@ import tedaiThumbnail from "@/assets/tedai-thumbnail.png";
 import gridriderThumbnail from "@/assets/gridrider-thumbnail.png";
 import xenThumbnail from "@/assets/xen-thumbnail.png";
 import certiqasThumbnail from "@/assets/certiqas-thumbnail.png";
+import mybubuThumbnail from "@/assets/mybubu-thumbnail.png";
 
 const projects = [
+  {
+    title: "MyBubu",
+    description: "DeFi protocol dApp on BNB Smart Chain with 70/20/10 deposit mechanism — auto-LP on PancakeSwap, 10-level referral chain, and NFT Node dividends with presale system",
+    tags: ["React", "Solidity", "Wagmi/Viem", "PancakeSwap", "DeFi", "BSC"],
+    image: mybubuThumbnail,
+    demoUrl: "https://www.mybubu.io/",
+  },
   {
     title: "Certiqas",
     description: "End-to-end Real Estate NFT Marketplace MVP featuring role-based Admin and User dashboards with property submission, verification, and NFT minting",
