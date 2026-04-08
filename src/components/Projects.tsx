@@ -12,8 +12,16 @@ import gridriderThumbnail from "@/assets/gridrider-thumbnail.png";
 import xenThumbnail from "@/assets/xen-thumbnail.png";
 import certiqasThumbnail from "@/assets/certiqas-thumbnail.png";
 import mybubuThumbnail from "@/assets/mybubu-thumbnail.png";
+import kingdomMiningThumbnail from "@/assets/kingdom-mining-thumbnail.png";
 
 const projects = [
+  {
+    title: "Kingdom Mining",
+    description: "Full-stack DeFi mining dApp on BSC with virtual vaults earning daily KMC rewards, NFT multiplier system, 10-level referral engine, real-time dashboards, and NaaS AI Data Mining infrastructure",
+    tags: ["React", "Solidity", "Wagmi/Viem", "DeFi", "NFT", "BSC"],
+    image: kingdomMiningThumbnail,
+    demoUrl: "https://kingdom-mining.com/",
+  },
   {
     title: "MyBubu",
     description: "DeFi protocol dApp on BNB Smart Chain with 70/20/10 deposit mechanism — auto-LP on PancakeSwap, 10-level referral chain, and NFT Node dividends with presale system",
