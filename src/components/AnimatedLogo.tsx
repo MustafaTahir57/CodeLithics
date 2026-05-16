@@ -2,11 +2,14 @@ import { motion } from "framer-motion";
 
 const AnimatedLogo = ({ className = "" }: { className?: string }) => {
   return (
-    <svg
+    <motion.svg
       className={className}
       viewBox="0 0 3000 2000"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      animate={{ y: [0, -6, 0] }}
+      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+      whileHover={{ scale: 1.05 }}
     >
       <defs>
         <linearGradient id="cl_grad1" gradientUnits="userSpaceOnUse" x1="852.9182" y1="432.6696" x2="1850.4753" y2="432.6696">
@@ -28,14 +31,64 @@ const AnimatedLogo = ({ className = "" }: { className?: string }) => {
       </defs>
 
       {/* Decorative gradient shapes */}
-      <polygon fill="url(#cl_grad1)" points="852.92,656.61 960.65,593.84 960.65,355.76 1483.02,54.91 1850.48,268.67 1702.31,355.76 1483.02,232.48 1114.18,442.85 1113.05,810.43" />
-      <polygon fill="url(#cl_grad2)" points="1655.63,447.15 1916.9,297.86 1916.9,433.58 2123.87,545.55 2123.87,1150.77 1750.64,1356.49 1750.64,1185.14 1966.1,1064.69 1969.49,637.16 1655.63,455.64" />
-      <polygon fill="url(#cl_grad3)" points="846.53,737.73 1002.61,825.95 1002.61,1093.76 1375.85,1287.4 1688.01,1114.36 1688.01,1406.16 1579.43,1348.48 1365.67,1463.84 846.53,1166.51" />
+      <motion.polygon
+        fill="url(#cl_grad1)"
+        points="852.92,656.61 960.65,593.84 960.65,355.76 1483.02,54.91 1850.48,268.67 1702.31,355.76 1483.02,232.48 1114.18,442.85 1113.05,810.43"
+        animate={{ opacity: [0.55, 1, 0.55] }}
+        transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.polygon
+        fill="url(#cl_grad2)"
+        points="1655.63,447.15 1916.9,297.86 1916.9,433.58 2123.87,545.55 2123.87,1150.77 1750.64,1356.49 1750.64,1185.14 1966.1,1064.69 1969.49,637.16 1655.63,455.64"
+        animate={{ opacity: [0.55, 1, 0.55] }}
+        transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
+      />
+      <motion.polygon
+        fill="url(#cl_grad3)"
+        points="846.53,737.73 1002.61,825.95 1002.61,1093.76 1375.85,1287.4 1688.01,1114.36 1688.01,1406.16 1579.43,1348.48 1365.67,1463.84 846.53,1166.51"
+        animate={{ opacity: [0.55, 1, 0.55] }}
+        transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+      />
 
       {/* Large decorative hexagon (top) */}
-      <path d="M1718.67,620.71l-237.43,137.04L1243.8,620.71" fill="none" stroke="#4144F3" strokeWidth="58" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" />
-      <path d="M1481.02,1043.92V766.23" fill="none" stroke="#4144F2" strokeWidth="58" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" />
-      <path d="M1733.22,620.72l-252.11-145.51L1229,620.72v291.01l252.11,145.51l252.11-145.51V620.72z" fill="none" stroke="currentColor" className="text-foreground" strokeWidth="53" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" />
+      <motion.g
+        style={{ transformOrigin: "1481.11px 766.22px" }}
+        animate={{ rotate: [0, 360] }}
+        transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
+      >
+        <motion.path
+          d="M1718.67,620.71l-237.43,137.04L1243.8,620.71"
+          fill="none"
+          stroke="#4144F3"
+          strokeWidth="58"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="10"
+          animate={{ opacity: [0.5, 1, 0.5] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.path
+          d="M1481.02,1043.92V766.23"
+          fill="none"
+          stroke="#4144F2"
+          strokeWidth="58"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="10"
+          animate={{ opacity: [0.5, 1, 0.5] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+        />
+        <path
+          d="M1733.22,620.72l-252.11-145.51L1229,620.72v291.01l252.11,145.51l252.11-145.51V620.72z"
+          fill="none"
+          stroke="currentColor"
+          className="text-foreground"
+          strokeWidth="53"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="10"
+        />
+      </motion.g>
 
       {/* Codelithics text — letter "e" */}
       <path fill="#4144F2" d="M1301.46,1964.15c-25.05,0-47.2-5.35-66.44-16.04c-19.24-11-34.37-26.12-45.36-45.36c-11-19.24-16.5-41.24-16.5-65.98c0-25.05,5.19-47.04,15.58-65.98c10.38-19.24,24.59-34.37,42.61-45.36c18.33-11,39.41-16.5,63.23-16.5c23.21,0,43.38,5.35,60.48,16.04c17.41,10.39,30.7,24.9,39.86,43.53c9.47,18.63,14.2,39.86,14.2,63.69c0,5.19-1.68,9.47-5.04,12.83c-3.36,3.05-7.64,4.58-12.83,4.58h-191.53v-31.62h193.82l-19.7,13.75c0.3-16.8-2.75-31.92-9.16-45.36c-6.41-13.44-15.58-23.98-27.49-31.62c-11.91-7.64-26.12-11.46-42.61-11.46c-17.41,0-32.69,3.97-45.82,11.91c-12.83,7.94-22.76,19.09-29.78,33.45c-6.72,14.05-10.08,30.09-10.08,48.11c0,18.02,3.97,34.06,11.91,48.11c7.94,14.05,18.79,25.05,32.53,32.99c14.05,7.94,30.09,11.91,48.11,11.91c10.38,0,20.92-1.83,31.62-5.5c11-3.67,19.7-8.25,26.12-13.75c3.67-2.75,7.79-4.12,12.37-4.12c4.89-0.31,8.86,0.92,11.91,3.67c4.58,3.97,6.87,8.25,6.87,12.83c0.3,4.58-1.68,8.55-5.96,11.91c-10.08,8.55-22.91,15.58-38.49,21.08C1330.33,1961.4,1315.51,1964.15,1301.46,1964.15z" />
