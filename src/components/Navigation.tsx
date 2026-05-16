@@ -49,7 +49,7 @@ const Navigation = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
             >
-              <AnimatedLogo className="h-7 md:h-8 w-auto" />
+              <AnimatedLogo className="h-14 md:h-16 w-auto" />
             </motion.div>
 
             {/* Desktop Navigation */}
