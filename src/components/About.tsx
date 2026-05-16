@@ -78,24 +78,24 @@ const About = () => {
                 className="w-full h-auto block"
               />
               <div className="pointer-events-none absolute inset-0 ring-1 ring-primary/20 rounded-2xl" />
-              <div className="absolute bottom-4 right-4 flex items-center gap-2">
+              <div className="absolute bottom-2 right-2 md:bottom-4 md:right-4 flex items-center gap-1.5 md:gap-2">
                 <button
                   type="button"
                   onClick={togglePlay}
                   aria-label={isPlaying ? "Pause intro video" : "Play intro video"}
                   aria-pressed={!isPlaying}
-                  className="w-11 h-11 inline-flex items-center justify-center rounded-full bg-background/70 backdrop-blur-md text-foreground border border-border hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                  className="w-8 h-8 md:w-11 md:h-11 inline-flex items-center justify-center rounded-full bg-background/70 backdrop-blur-md text-foreground border border-border hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
-                  {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+                  {isPlaying ? <Pause className="w-3.5 h-3.5 md:w-5 md:h-5" /> : <Play className="w-3.5 h-3.5 md:w-5 md:h-5" />}
                 </button>
                 <button
                   type="button"
                   onClick={toggleMute}
                   aria-label={isMuted ? "Unmute intro video" : "Mute intro video"}
                   aria-pressed={!isMuted}
-                  className="w-11 h-11 inline-flex items-center justify-center rounded-full bg-background/70 backdrop-blur-md text-foreground border border-border hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                  className="w-8 h-8 md:w-11 md:h-11 inline-flex items-center justify-center rounded-full bg-background/70 backdrop-blur-md text-foreground border border-border hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
-                  {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
+                  {isMuted ? <VolumeX className="w-3.5 h-3.5 md:w-5 md:h-5" /> : <Volume2 className="w-3.5 h-3.5 md:w-5 md:h-5" />}
                 </button>
               </div>
             </div>
