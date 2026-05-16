@@ -32,6 +32,28 @@ const About = () => {
           </p>
         </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-5xl mx-auto mb-16"
+        >
+          <div className="relative rounded-2xl overflow-hidden bg-gradient-primary p-[2px] card-glow">
+            <div className="relative rounded-2xl overflow-hidden bg-card">
+              <video
+                src="/intro_video.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-auto block"
+              />
+              <div className="pointer-events-none absolute inset-0 ring-1 ring-primary/20 rounded-2xl" />
+            </div>
+          </div>
+        </motion.div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {stats.map((stat, index) => (
             <motion.div
