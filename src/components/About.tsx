@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
+import { useRef, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, Award, Code, Globe } from "lucide-react";
+import { Users, Award, Code, Globe, Play, Pause, Volume2, VolumeX } from "lucide-react";
 
 const stats = [
   { icon: Users, label: "Happy Clients", value: "50+" },
@@ -10,6 +11,29 @@ const stats = [
 ];
 
 const About = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [isMuted, setIsMuted] = useState(true);
+
+  const togglePlay = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    if (v.paused) {
+      v.play();
+      setIsPlaying(true);
+    } else {
+      v.pause();
+      setIsPlaying(false);
+    }
+  };
+
+  const toggleMute = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = !v.muted;
+    setIsMuted(v.muted);
+  };
+
   return (
     <section id="about" className="py-20 px-4 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-glow opacity-20" />
@@ -42,14 +66,38 @@ const About = () => {
           <div className="relative rounded-2xl overflow-hidden bg-gradient-primary p-[2px] card-glow">
             <div className="relative rounded-2xl overflow-hidden bg-card">
               <video
+                ref={videoRef}
                 src="/intro_video.mp4"
                 autoPlay
                 muted
                 loop
                 playsInline
+                onPlay={() => setIsPlaying(true)}
+                onPause={() => setIsPlaying(false)}
+                onVolumeChange={(e) => setIsMuted((e.target as HTMLVideoElement).muted)}
                 className="w-full h-auto block"
               />
               <div className="pointer-events-none absolute inset-0 ring-1 ring-primary/20 rounded-2xl" />
+              <div className="absolute bottom-4 right-4 flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={togglePlay}
+                  aria-label={isPlaying ? "Pause intro video" : "Play intro video"}
+                  aria-pressed={!isPlaying}
+                  className="w-11 h-11 inline-flex items-center justify-center rounded-full bg-background/70 backdrop-blur-md text-foreground border border-border hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                >
+                  {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+                </button>
+                <button
+                  type="button"
+                  onClick={toggleMute}
+                  aria-label={isMuted ? "Unmute intro video" : "Mute intro video"}
+                  aria-pressed={!isMuted}
+                  className="w-11 h-11 inline-flex items-center justify-center rounded-full bg-background/70 backdrop-blur-md text-foreground border border-border hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                >
+                  {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
+                </button>
+              </div>
             </div>
           </div>
         </motion.div>
