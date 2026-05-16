@@ -16,7 +16,7 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
-             <AnimatedLogo className="h-7 md:h-8 w-auto" />
+             <AnimatedLogo className="h-14 md:h-16 w-auto" />
             </motion.div>
             <p className="text-muted-foreground text-sm">
               A Web3 & AI development studio led by Muhammad Mustafa Tahir.
