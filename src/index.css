@@ -8,48 +8,53 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Light theme - Codelithics Blue (#4144F2) + Black */
-    --background: 220 30% 98%;
-    --foreground: 220 20% 10%;
+    /* Brand palette
+       Primary Violet  #6C50FE -> 248 99% 65%
+       Primary Blue    #057FFC -> 211 98% 50%
+       Mid Blue-Violet #4144F2 -> 239 88% 60%
+       Brand Black     #020205 -> 240 33% 2%
+       White           #FFFFFF -> 0 0% 100%
+    */
+    --background: 0 0% 100%;
+    --foreground: 240 33% 2%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 20% 10%;
+    --card-foreground: 240 33% 2%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 10%;
+    --popover-foreground: 240 33% 2%;
 
-    /* Codelithics Blue as primary */
-    --primary: 239 88% 60%;
+    --primary: 248 99% 65%;
     --primary-foreground: 0 0% 100%;
-    
-    --primary-glow: 239 88% 70%;
-    --secondary-glow: 239 70% 55%;
 
-    --secondary: 220 20% 94%;
-    --secondary-foreground: 220 20% 10%;
+    --primary-glow: 248 99% 65%;
+    --secondary-glow: 211 98% 50%;
 
-    --muted: 220 15% 92%;
-    --muted-foreground: 220 10% 45%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 240 33% 2%;
 
-    --accent: 239 88% 60%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 240 10% 30%;
+
+    --accent: 248 99% 65%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
-    --ring: 239 88% 60%;
+    --border: 240 10% 90%;
+    --input: 240 10% 90%;
+    --ring: 248 99% 65%;
 
     --radius: 0.75rem;
 
     /* Gradient definitions */
-    --gradient-primary: linear-gradient(135deg, hsl(239 88% 60%) 0%, hsl(239 70% 50%) 100%);
-    --gradient-glow: linear-gradient(135deg, hsl(239 88% 60% / 0.1) 0%, hsl(239 70% 55% / 0.1) 100%);
-    
+    --gradient-primary: linear-gradient(135deg, #6C50FE 0%, #057FFC 100%);
+    --gradient-glow: linear-gradient(135deg, hsl(248 99% 65% / 0.1) 0%, hsl(211 98% 50% / 0.1) 100%);
+
     /* Shadows */
-    --shadow-glow: 0 0 40px hsl(239 88% 60% / 0.15), 0 0 80px hsl(239 70% 55% / 0.1);
-    --shadow-card: 0 10px 40px -10px hsl(220 20% 10% / 0.08);
+    --shadow-glow: 0 0 40px hsl(248 99% 65% / 0.18), 0 0 80px hsl(211 98% 50% / 0.12);
+    --shadow-card: 0 10px 40px -10px hsl(240 33% 2% / 0.08);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -67,13 +72,16 @@ All colors MUST be HSL.
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
   }
 }
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary-glow;
+    background: linear-gradient(135deg, #6C50FE, #057FFC);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
   
   .glow-effect {
@@ -85,7 +93,7 @@ All colors MUST be HSL.
   }
   
   .bg-hero-light {
-    background: linear-gradient(135deg, hsl(220 30% 98%) 0%, hsl(239 88% 60% / 0.05) 50%, hsl(220 30% 96%) 100%);
+    background: linear-gradient(135deg, #FFFFFF 0%, hsl(248 99% 65% / 0.06) 50%, hsl(211 98% 50% / 0.05) 100%);
   }
 }
 
