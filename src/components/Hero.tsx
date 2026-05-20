@@ -127,7 +127,7 @@ const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-primary text-foreground hover:bg-primary/10 text-lg px-8 py-6 rounded-xl font-semibold"
+              className="border-2 !border-[#6C50FE] text-foreground hover:bg-primary/10 text-lg px-8 py-6 rounded-xl font-semibold"
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Explore Projects

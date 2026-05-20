@@ -78,10 +78,7 @@ All colors MUST be HSL.
 
 @layer utilities {
   .text-gradient {
-    background: linear-gradient(135deg, #6C50FE, #057FFC);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: #6C50FE;
   }
   
   .glow-effect {
