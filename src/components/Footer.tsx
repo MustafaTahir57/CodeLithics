@@ -1,6 +1,7 @@
-import { Github, Linkedin, Instagram, Mail } from "lucide-react";
-import { motion } from "framer-motion";
+import {Github, Linkedin, Instagram, Mail} from "lucide-react";
+import {motion} from "framer-motion";
 import AnimatedLogo from "./AnimatedLogo";
+import codelithicsLogo from "@/assets/codelithics-logo.png";
 
 const Footer = () => {
   return (
@@ -8,23 +9,28 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <motion.div 
+            <motion.div
               className="flex items-center gap-2 mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
+              initial={{opacity: 0, y: 20}}
+              whileInView={{opacity: 1, y: 0}}
+              viewport={{once: true}}
+              transition={{duration: 0.6, ease: "easeOut"}}
             >
-             <AnimatedLogo className="h-16 md:h-28 w-auto" />
+              {/* <AnimatedLogo className="h-16 md:h-28 w-auto" /> */}
+              <img
+                src={codelithicsLogo}
+                alt="Codelithics Logo"
+                className="h-20 md:h-24 w-auto"
+              />
             </motion.div>
             <p className="text-muted-foreground text-sm">
               A Web3 & AI development studio led by Muhammad Mustafa Tahir.
             </p>
             <p className="text-muted-foreground text-xs mt-2">
               All open-source projects are maintained by the founder:{" "}
-              <a 
-                href="https://github.com/MustafaTahir57" 
-                target="_blank" 
+              <a
+                href="https://github.com/MustafaTahir57"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:underline"
               >

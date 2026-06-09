@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import {useState, useEffect} from "react";
+import {motion} from "framer-motion";
+import {Button} from "@/components/ui/button";
+import {Menu, X} from "lucide-react";
 import AnimatedLogo from "@/components/AnimatedLogo";
+import codelithicsLogo from "@/assets/codelithics-logo.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,39 +18,42 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { label: "Services", href: "#services" },
-    { label: "Projects", href: "#projects" },
-    { label: "About", href: "#about" },
-    { label: "Testimonials", href: "#testimonials" },
-    { label: "Contact", href: "#contact" },
+    {label: "Services", href: "#services"},
+    {label: "Projects", href: "#projects"},
+    {label: "About", href: "#about"},
+    {label: "Testimonials", href: "#testimonials"},
+    {label: "Contact", href: "#contact"},
   ];
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: "smooth" });
+    element?.scrollIntoView({behavior: "smooth"});
     setIsMobileMenuOpen(false);
   };
 
   return (
     <>
       <motion.nav
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? "bg-background/80 backdrop-blur-lg border-b border-border"
-            : "bg-transparent"
-        }`}
+        initial={{y: -100}}
+        animate={{y: 0}}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+          ? "bg-background/80 backdrop-blur-lg border-b border-border"
+          : "bg-transparent"
+          }`}
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-24">
             <motion.div
               className="flex items-center gap-2"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
+              initial={{opacity: 0, scale: 0.9}}
+              animate={{opacity: 1, scale: 1}}
+              transition={{duration: 0.5, ease: "easeOut"}}
             >
-              <AnimatedLogo className="h-16 md:h-28 w-auto" />
+              <img
+                src={codelithicsLogo}
+                alt="Codelithics Logo"
+                className="h-20 md:h-24 w-auto"
+              />
             </motion.div>
 
             {/* Desktop Navigation */}
@@ -89,9 +93,9 @@ const Navigation = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
+          initial={{opacity: 0, y: -20}}
+          animate={{opacity: 1, y: 0}}
+          exit={{opacity: 0, y: -20}}
           className="fixed top-24 left-0 right-0 z-40 bg-background/95 backdrop-blur-lg border-b border-border md:hidden"
         >
           <div className="container mx-auto px-4 py-6 space-y-4">
