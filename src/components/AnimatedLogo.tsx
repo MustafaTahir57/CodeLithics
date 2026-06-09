@@ -1,36 +1,26 @@
+import { motion } from "framer-motion";
+
 /**
- * Codelithics full logo with the outer hexagon orbiting in a small circular path.
- * Inner cube and "CODELITHICS" wordmark remain perfectly static.
+ * Codelithics full logo with the outer hexagon spinning continuously
+ * around its own center. Inner cube and "CODELITHICS" wordmark stay static.
  */
 const AnimatedLogo = ({ className = "" }: { className?: string }) => {
   return (
-    <>
-      <style>{`
-        @keyframes codelithics-orbit {
-          0%   { transform: translate(8px, 0); }
-          25%  { transform: translate(0, 8px); }
-          50%  { transform: translate(-8px, 0); }
-          75%  { transform: translate(0, -8px); }
-          100% { transform: translate(8px, 0); }
-        }
-        .codelithics-hex {
-          transform-origin: 357px 200px;
-          transform-box: fill-box;
-          animation: codelithics-orbit 6s linear infinite;
-          will-change: transform;
-        }
-      `}</style>
-      <svg
+    <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 708.65 594.25"
         className={className}
         role="img"
         aria-label="Codelithics"
       >
-        {/* Outer hexagon shell — animated in a circular orbit */}
-        <g className="codelithics-hex">
+        {/* Outer hexagon shell — spins around its own center */}
+        <motion.g
+          style={{ transformOrigin: "354.7px 197px" }}
+          animate={{ rotate: [0, 360] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+        >
           <path fill="#020202" d="M172.89,103.1L345.38,2.97c4.04-2.36,8.44-3.88,13.11-2.36,59.71,33.69,119.51,67.67,178.22,103.03l3.44,7.81v199.55c-.77,8.78-6.01,11.09-12.54,15.2-54.29,34.1-112.4,62.56-166.96,96.29-4.66,1.9-8.19,1.72-12.77-.27l-170.23-98.27c-3.91-2.25-7.01-5.32-8.26-9.74-1.21-66.98-.14-134.19-.54-201.26,0-3.89,1.88-6.83,4.04-9.84ZM219.13,109.6c-.64.37-1.99.48-3.02,1.08-6.15,3.58-12.39,7.03-18.35,10.92-.9,1.49-.35,10.17-.38,12.75-.75,55.97.26,112.04.36,168.01,40.81,23.36,81.3,47.3,122.13,70.62,6.33,3.61,12.92,6.82,19.25,10.37,1.45.81,3.59,2.83,5.49,3.88,3.26,1.8,6.42,3.86,9.95,5.13,1.88.1,13.35-7.48,16.06-9.01,47.05-26.68,93.81-53.91,140.64-80.99-.06-55.96,1.34-112.06.36-168.01-.05-2.95.64-11.36-.69-13.18-.86-1.18-13.55-7.98-16.06-9.44-1.62-.94-3.8-1.43-5-2.12-44.18-25.65-88.4-52.08-132.96-77.42-1.52-.84-3.31-.84-4.84,0-44.47,25.49-88.79,51.73-132.96,77.42Z"/>
-        </g>
+        </motion.g>
 
         {/* Inner cube — static */}
         <path fill="#4146eb" d="M219.13,109.6l130.75,75.88,5.32,2.12c39.61-22.62,79.16-45.34,118.68-68.12,5.38-3.1,10.98-6.21,16-9.88,1.2.7,3.38,1.18,5,2.12,2.51,1.46,15.19,8.26,16.06,9.44,1.33,1.82.64,10.23.69,13.18l-141.38,81,.38,168c-2.71,1.53-14.18,9.11-16.06,9.01-3.53-1.27-6.69-3.33-9.95-5.13-1.9-1.05-4.05-3.07-5.49-3.88l-.37-168.01-137.6-79.91-3.78-1.09c.03-2.58-.52-11.25.38-12.75,5.96-3.89,12.2-7.34,18.35-10.92,1.03-.6,2.38-.71,3.02-1.08Z"/>
@@ -51,7 +41,6 @@ const AnimatedLogo = ({ className = "" }: { className?: string }) => {
         <path fill="#0b0b0b" d="M554.4,498.7c7.75-1.48,9.75,9.63,3.98,11.52-9.82,3.21-12.56-9.88-3.98-11.52Z"/>
         <path fill="#4f52ed" d="M130.83,542.8c.77.47,4.24,2.16,4.37,2.38.77,1.31-.66,3.03-.62,3.62l-20.64,11.24-.36,24.76c-.56.3-.96,1.84-2.74,2.07-2.71.34-2.35-1.97-2.51-2.07l-.37-24.01-21.38-12.74c.07-1-.25-2.05.36-2.99.82-1.3,2.67-1.04,3.39-1.51l20.51,11.85c5.91-3.65,12.28-6.65,18.15-10.35.98-.62,2.19-.65,1.84-2.25Z"/>
       </svg>
-    </>
   );
 };
 
