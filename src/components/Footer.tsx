@@ -1,7 +1,6 @@
 import {Github, Linkedin, Instagram, Mail} from "lucide-react";
 import {motion} from "framer-motion";
 import AnimatedLogo from "./AnimatedLogo";
-import codelithicsLogo from "@/assets/codelithics-logo.png";
 
 const Footer = () => {
   return (
@@ -16,12 +15,7 @@ const Footer = () => {
               viewport={{once: true}}
               transition={{duration: 0.6, ease: "easeOut"}}
             >
-              {/* <AnimatedLogo className="h-16 md:h-28 w-auto" /> */}
-              <img
-                src={codelithicsLogo}
-                alt="Codelithics Logo"
-                className="h-20 md:h-24 w-auto"
-              />
+              <AnimatedLogo className="h-14 md:h-16 text-xl md:text-2xl" />
             </motion.div>
             <p className="text-muted-foreground text-sm">
               A Web3 & AI development studio led by Muhammad Mustafa Tahir.
