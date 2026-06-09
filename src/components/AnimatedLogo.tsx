@@ -48,9 +48,6 @@ const AnimatedLogo = ({ className = "" }: { className?: string }) => {
 };
 
 export default AnimatedLogo;
-
-// Legacy inline-SVG implementation kept below for reference but no longer rendered.
-const _LegacyAnimatedLogo = ({ className = "" }: { className?: string }) => {
   return (
     <motion.svg
       className={className}
@@ -199,4 +196,4 @@ const _LegacyAnimatedLogo = ({ className = "" }: { className?: string }) => {
   );
 };
 
-export default AnimatedLogo;
+// (legacy export removed)
