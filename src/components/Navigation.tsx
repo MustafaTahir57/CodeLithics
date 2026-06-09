@@ -3,7 +3,6 @@ import {motion} from "framer-motion";
 import {Button} from "@/components/ui/button";
 import {Menu, X} from "lucide-react";
 import AnimatedLogo from "@/components/AnimatedLogo";
-import codelithicsLogo from "@/assets/codelithics-logo.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,11 +48,7 @@ const Navigation = () => {
               animate={{opacity: 1, scale: 1}}
               transition={{duration: 0.5, ease: "easeOut"}}
             >
-              <img
-                src={codelithicsLogo}
-                alt="Codelithics Logo"
-                className="h-20 md:h-24 w-auto"
-              />
+              <AnimatedLogo className="h-12 md:h-14 text-xl md:text-2xl" />
             </motion.div>
 
             {/* Desktop Navigation */}
