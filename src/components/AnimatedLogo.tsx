@@ -1,4 +1,4 @@
-import logoAsset from "@/assets/codelithics.png.asset.json";
+import logoAsset from "@/assets/codelithics-logo.png.asset.json";
 
 const AnimatedLogo = ({ className = "" }: { className?: string }) => {
   return (
