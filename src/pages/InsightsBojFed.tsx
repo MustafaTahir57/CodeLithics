@@ -29,7 +29,13 @@ import heroImage from "@/assets/article-boj-fed.jpg";
 
 const PUBLISHED_DATE = "June 14, 2026";
 
-const scenarios = [
+const scenarios: Array<{
+  n: string;
+  title: string;
+  tone: "bull" | "bear" | "neutral";
+  summary: string;
+  effects: Record<string, string>;
+}> = [
   {
     n: "01",
     title: "BOJ Hikes + Hawkish Fed",
