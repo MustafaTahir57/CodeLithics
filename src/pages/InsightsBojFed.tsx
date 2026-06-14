@@ -102,22 +102,22 @@ const InsightsBojFed = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#06060B] text-white selection:bg-[#6C50FE]/40">
+    <div className="min-h-screen bg-[#F8F9FC] text-[#161A1D] selection:bg-[#4144F2]/20">
       <Navigation />
 
       {/* Hero */}
       <article>
         <header className="relative pt-32 pb-12 px-4 overflow-hidden">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A18] via-[#06060B] to-[#06060B]" />
-            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[#6C50FE]/20 rounded-full blur-[120px]" />
-            <div className="absolute top-40 right-1/4 w-[500px] h-[500px] bg-[#057FFC]/15 rounded-full blur-[120px]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-white via-[#F8F9FC] to-[#F8F9FC]" />
+            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[#4144F2]/10 rounded-full blur-[120px]" />
+            <div className="absolute top-40 right-1/4 w-[500px] h-[500px] bg-[#057FFC]/10 rounded-full blur-[120px]" />
           </div>
 
           <div className="max-w-[800px] mx-auto">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors mb-8"
+              className="inline-flex items-center gap-2 text-sm text-[#161A1D]/60 hover:text-[#4144F2] transition-colors mb-8"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Codelithics
@@ -128,29 +128,29 @@ const InsightsBojFed = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#6C50FE]/40 bg-[#6C50FE]/10 text-xs uppercase tracking-widest text-[#A99CFF] mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#4144F2]/30 bg-[#4144F2]/8 text-xs uppercase tracking-widest text-[#4144F2] mb-6">
                 <Tag className="w-3 h-3" /> Market Insights
               </div>
 
               <h1 className="font-heading text-4xl md:text-6xl font-bold leading-[1.05] tracking-tight mb-5">
                 Could Japan Trigger the Next{" "}
-                <span className="bg-gradient-to-r from-[#6C50FE] to-[#057FFC] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#4144F2] to-[#057FFC] bg-clip-text text-transparent">
                   Crypto Selloff?
                 </span>
               </h1>
-              <p className="text-lg md:text-xl text-white/70 leading-relaxed mb-8">
+              <p className="text-lg md:text-xl text-[#161A1D]/70 leading-relaxed mb-8">
                 Why June 16–17 Could Be a Critical Week for Global Liquidity.
               </p>
 
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-white/60 pb-8 border-b border-white/10">
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-[#161A1D]/60 pb-8 border-b border-[#161A1D]/10">
                 <span className="inline-flex items-center gap-2">
-                  <User className="w-4 h-4 text-[#6C50FE]" /> Codelithics Research
+                  <User className="w-4 h-4 text-[#4144F2]" /> Codelithics Research
                 </span>
                 <span className="inline-flex items-center gap-2">
-                  <Calendar className="w-4 h-4 text-[#6C50FE]" /> {PUBLISHED_DATE}
+                  <Calendar className="w-4 h-4 text-[#4144F2]" /> {PUBLISHED_DATE}
                 </span>
                 <span className="inline-flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-[#6C50FE]" /> 5 min read
+                  <Clock className="w-4 h-4 text-[#4144F2]" /> 5 min read
                 </span>
               </div>
             </motion.div>
@@ -163,7 +163,7 @@ const InsightsBojFed = () => {
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7 }}
-            className="max-w-[1100px] mx-auto rounded-2xl overflow-hidden border border-white/10 shadow-[0_30px_80px_-30px_rgba(108,80,254,0.5)]"
+            className="max-w-[1100px] mx-auto rounded-2xl overflow-hidden border border-[#161A1D]/10 shadow-[0_30px_80px_-30px_rgba(65,68,242,0.35)]"
           >
             <img
               src={heroImage}
@@ -223,7 +223,7 @@ const InsightsBojFed = () => {
                   modern finance. The mechanic is simple:
                 </p>
 
-                <div className="my-8 rounded-2xl border border-white/10 bg-gradient-to-br from-[#0F0F1F] to-[#0A0A18] p-6 md:p-8">
+                <div className="my-8 rounded-2xl border border-[#161A1D]/10 bg-white p-6 md:p-8 shadow-[0_10px_40px_-15px_rgba(22,26,29,0.1)]">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
                     <CarryStep
                       step="01"
@@ -337,7 +337,7 @@ const InsightsBojFed = () => {
                   short-term liquidity — and therefore short-term price action —
                   across nearly every risk asset.
                 </p>
-                <blockquote className="not-prose my-8 border-l-4 border-[#6C50FE] bg-gradient-to-r from-[#6C50FE]/10 to-transparent rounded-r-xl p-6 text-lg md:text-xl text-white/90 italic leading-relaxed">
+                <blockquote className="not-prose my-8 border-l-4 border-[#4144F2] bg-gradient-to-r from-[#4144F2]/8 to-transparent rounded-r-xl p-6 text-lg md:text-xl text-[#161A1D]/90 italic leading-relaxed">
                   "The next few days may not determine the future of crypto, but
                   they could determine the market's direction in the short term.
                   For Web3 builders, understanding liquidity is just as important
@@ -346,9 +346,9 @@ const InsightsBojFed = () => {
               </Section>
 
               {/* Inline share */}
-              <div className="mt-12 pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
-                <div className="text-sm text-white/60">
-                  Published by <span className="text-white">Codelithics Research</span>
+              <div className="mt-12 pt-8 border-t border-[#161A1D]/10 flex flex-wrap items-center justify-between gap-4">
+                <div className="text-sm text-[#161A1D]/60">
+                  Published by <span className="text-[#161A1D] font-medium">Codelithics Research</span>
                 </div>
                 <ShareRow />
               </div>
@@ -364,10 +364,10 @@ const InsightsBojFed = () => {
                 <ul className="space-y-4">
                   {related.map((r) => (
                     <li key={r.title} className="group cursor-pointer">
-                      <div className="text-[10px] uppercase tracking-widest text-[#A99CFF] mb-1">
+                      <div className="text-[10px] uppercase tracking-widest text-[#4144F2] mb-1 font-medium">
                         {r.tag} · {r.read}
                       </div>
-                      <div className="text-sm text-white/85 group-hover:text-white leading-snug">
+                      <div className="text-sm text-[#161A1D]/85 group-hover:text-[#4144F2] leading-snug transition-colors">
                         {r.title}
                       </div>
                     </li>
@@ -380,7 +380,7 @@ const InsightsBojFed = () => {
                 icon={<Mail className="w-4 h-4" />}
                 accent
               >
-                <p className="text-sm text-white/70 mb-4">
+                <p className="text-sm text-[#161A1D]/70 mb-4">
                   Weekly insights on Web3, AI, and the markets that move them.
                 </p>
                 <form
@@ -390,11 +390,11 @@ const InsightsBojFed = () => {
                   <input
                     type="email"
                     placeholder="you@domain.com"
-                    className="w-full px-3 py-2 rounded-lg bg-[#0A0A18] border border-white/10 focus:border-[#6C50FE] outline-none text-sm placeholder:text-white/40"
+                    className="w-full px-3 py-2 rounded-lg bg-white border border-[#161A1D]/15 focus:border-[#4144F2] outline-none text-sm placeholder:text-[#161A1D]/40 text-[#161A1D]"
                   />
                   <Button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-[#6C50FE] to-[#057FFC] hover:opacity-90 text-white"
+                    className="w-full bg-gradient-to-r from-[#4144F2] to-[#057FFC] hover:opacity-90 text-white"
                   >
                     Subscribe
                   </Button>
@@ -403,13 +403,13 @@ const InsightsBojFed = () => {
 
               <SidebarCard title="Recent articles" icon={<Globe className="w-4 h-4" />}>
                 <ul className="space-y-3 text-sm">
-                  <li className="text-white/80 hover:text-white cursor-pointer">
+                  <li className="text-[#161A1D]/80 hover:text-[#4144F2] cursor-pointer transition-colors">
                     Bitcoin ETF Flows: What the Last 30 Days Tell Us
                   </li>
-                  <li className="text-white/80 hover:text-white cursor-pointer">
+                  <li className="text-[#161A1D]/80 hover:text-[#4144F2] cursor-pointer transition-colors">
                     The Quiet Rise of Onchain AI Agents
                   </li>
-                  <li className="text-white/80 hover:text-white cursor-pointer">
+                  <li className="text-[#161A1D]/80 hover:text-[#4144F2] cursor-pointer transition-colors">
                     Why Stablecoin Velocity Is the New M2
                   </li>
                 </ul>
@@ -420,14 +420,14 @@ const InsightsBojFed = () => {
 
         {/* Footer CTA */}
         <section className="px-4 pb-24">
-          <div className="max-w-[1100px] mx-auto relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#0F0F1F] via-[#0A0A18] to-[#0A0A18] p-10 md:p-16 text-center">
-            <div className="absolute -top-20 -left-20 w-72 h-72 bg-[#6C50FE]/30 rounded-full blur-[120px]" />
-            <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-[#057FFC]/25 rounded-full blur-[120px]" />
+          <div className="max-w-[1100px] mx-auto relative overflow-hidden rounded-3xl border border-[#161A1D]/10 bg-white p-10 md:p-16 text-center shadow-[0_20px_60px_-20px_rgba(22,26,29,0.1)]">
+            <div className="absolute -top-20 -left-20 w-72 h-72 bg-[#4144F2]/15 rounded-full blur-[120px]" />
+            <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-[#057FFC]/15 rounded-full blur-[120px]" />
             <div className="relative">
               <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4">
                 Building in Web3 or AI?
               </h2>
-              <p className="text-white/70 max-w-xl mx-auto mb-8">
+              <p className="text-[#161A1D]/70 max-w-xl mx-auto mb-8">
                 Codelithics partners with founders and teams shipping at the edge
                 of crypto and intelligence.
               </p>
@@ -435,7 +435,7 @@ const InsightsBojFed = () => {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-gradient-to-r from-[#6C50FE] to-[#057FFC] hover:opacity-90 text-white px-8"
+                  className="bg-gradient-to-r from-[#4144F2] to-[#057FFC] hover:opacity-90 text-white px-8"
                 >
                   <Link to="/#contact">
                     Work With Codelithics <ArrowRight className="ml-2 w-4 h-4" />
@@ -445,7 +445,7 @@ const InsightsBojFed = () => {
                   asChild
                   size="lg"
                   variant="outline"
-                  className="border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white px-8"
+                  className="border-[#161A1D]/20 bg-transparent text-[#161A1D] hover:bg-[#161A1D]/5 hover:text-[#161A1D] px-8"
                 >
                   <Link to="/#projects">Explore Our Projects</Link>
                 </Button>
@@ -472,10 +472,10 @@ const Section = ({
   children: React.ReactNode;
 }) => (
   <section id={id} className="mt-12 first:mt-0 scroll-mt-28">
-    <h2 className="font-heading text-2xl md:text-3xl font-bold mb-5 text-white">
+    <h2 className="font-heading text-2xl md:text-3xl font-bold mb-5 text-[#161A1D]">
       {title}
     </h2>
-    <div className="prose prose-invert prose-lg max-w-none prose-p:text-white/75 prose-p:leading-[1.8] prose-li:text-white/75 prose-strong:text-white prose-em:text-white/90 prose-a:text-[#A99CFF]">
+    <div className="prose prose-lg max-w-none prose-p:text-[#161A1D]/80 prose-p:leading-[1.8] prose-li:text-[#161A1D]/80 prose-strong:text-[#161A1D] prose-em:text-[#161A1D]/90 prose-a:text-[#4144F2]">
       {children}
     </div>
   </section>
@@ -490,11 +490,11 @@ const InsightCard = ({
   title: string;
   children: React.ReactNode;
 }) => (
-  <div className="not-prose my-8 rounded-2xl border border-[#6C50FE]/30 bg-gradient-to-br from-[#6C50FE]/10 to-[#057FFC]/5 p-6">
-    <div className="flex items-center gap-2 text-[#A99CFF] text-xs uppercase tracking-widest mb-2">
+  <div className="not-prose my-8 rounded-2xl border border-[#4144F2]/25 bg-gradient-to-br from-[#4144F2]/8 to-[#057FFC]/5 p-6">
+    <div className="flex items-center gap-2 text-[#4144F2] text-xs uppercase tracking-widest mb-2 font-medium">
       {icon} {title}
     </div>
-    <div className="text-white/85 leading-relaxed">{children}</div>
+    <div className="text-[#161A1D]/85 leading-relaxed">{children}</div>
   </div>
 );
 
@@ -512,13 +512,13 @@ const CarryStep = ({
   <div
     className={`rounded-xl border p-4 h-full ${
       warn
-        ? "border-amber-500/30 bg-amber-500/5"
-        : "border-white/10 bg-white/[0.03]"
+        ? "border-amber-500/40 bg-amber-50"
+        : "border-[#161A1D]/10 bg-[#F8F9FC]"
     }`}
   >
     <div
       className={`text-xs font-mono mb-2 ${
-        warn ? "text-amber-400" : "text-[#A99CFF]"
+        warn ? "text-amber-600" : "text-[#4144F2]"
       }`}
     >
       {warn ? (
@@ -529,14 +529,14 @@ const CarryStep = ({
         `STEP ${step}`
       )}
     </div>
-    <div className="font-heading font-semibold text-white mb-1">{title}</div>
-    <div className="text-sm text-white/65 leading-relaxed">{desc}</div>
+    <div className="font-heading font-semibold text-[#161A1D] mb-1">{title}</div>
+    <div className="text-sm text-[#161A1D]/65 leading-relaxed">{desc}</div>
   </div>
 );
 
 const CarryArrow = () => (
   <div className="hidden md:flex items-center justify-center">
-    <ArrowRight className="w-6 h-6 text-[#6C50FE]" />
+    <ArrowRight className="w-6 h-6 text-[#4144F2]" />
   </div>
 );
 
@@ -556,25 +556,25 @@ const ComparisonCard = ({
     <div
       className={`rounded-2xl border p-6 ${
         isBull
-          ? "border-emerald-500/25 bg-emerald-500/[0.04]"
-          : "border-rose-500/25 bg-rose-500/[0.04]"
+          ? "border-emerald-500/30 bg-emerald-50"
+          : "border-rose-500/30 bg-rose-50"
       }`}
     >
       <div
         className={`inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-xs uppercase tracking-widest mb-3 ${
           isBull
-            ? "bg-emerald-500/15 text-emerald-300"
-            : "bg-rose-500/15 text-rose-300"
+            ? "bg-emerald-500/15 text-emerald-700"
+            : "bg-rose-500/15 text-rose-700"
         }`}
       >
         {icon} {title}
       </div>
-      <ul className="space-y-2 text-white/80 text-sm">
+      <ul className="space-y-2 text-[#161A1D]/80 text-sm">
         {points.map((p) => (
           <li key={p} className="flex gap-2">
             <CheckCircle2
               className={`w-4 h-4 mt-0.5 flex-shrink-0 ${
-                isBull ? "text-emerald-400" : "text-rose-400"
+                isBull ? "text-emerald-600" : "text-rose-600"
               }`}
             />
             <span>{p}</span>
@@ -600,34 +600,34 @@ const ScenarioCard = ({
 }) => {
   const accent =
     tone === "bull"
-      ? "from-emerald-500/15 to-transparent border-emerald-500/25"
+      ? "from-emerald-500/10 to-transparent border-emerald-500/30"
       : tone === "bear"
-      ? "from-rose-500/15 to-transparent border-rose-500/25"
-      : "from-[#6C50FE]/15 to-transparent border-[#6C50FE]/25";
+      ? "from-rose-500/10 to-transparent border-rose-500/30"
+      : "from-[#4144F2]/10 to-transparent border-[#4144F2]/25";
   return (
     <div
-      className={`rounded-2xl border bg-gradient-to-br ${accent} bg-[#0A0A18] p-6`}
+      className={`rounded-2xl border bg-gradient-to-br ${accent} bg-white p-6 shadow-[0_8px_30px_-15px_rgba(22,26,29,0.08)]`}
     >
       <div className="flex items-start justify-between gap-4 mb-3">
         <div>
-          <div className="text-xs font-mono text-white/50 mb-1">
+          <div className="text-xs font-mono text-[#161A1D]/50 mb-1">
             SCENARIO {n}
           </div>
-          <h3 className="font-heading text-xl font-bold text-white">{title}</h3>
+          <h3 className="font-heading text-xl font-bold text-[#161A1D]">{title}</h3>
         </div>
-        <Bitcoin className="w-5 h-5 text-white/40 flex-shrink-0" />
+        <Bitcoin className="w-5 h-5 text-[#161A1D]/40 flex-shrink-0" />
       </div>
-      <p className="text-white/70 text-sm mb-5 leading-relaxed">{summary}</p>
+      <p className="text-[#161A1D]/70 text-sm mb-5 leading-relaxed">{summary}</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {Object.entries(effects).map(([k, v]) => (
           <div
             key={k}
-            className="rounded-lg border border-white/10 bg-white/[0.02] p-3"
+            className="rounded-lg border border-[#161A1D]/10 bg-[#F8F9FC] p-3"
           >
-            <div className="text-[10px] uppercase tracking-widest text-[#A99CFF] mb-1">
+            <div className="text-[10px] uppercase tracking-widest text-[#4144F2] mb-1 font-medium">
               {k}
             </div>
-            <div className="text-sm text-white/80 leading-snug">{v}</div>
+            <div className="text-sm text-[#161A1D]/80 leading-snug">{v}</div>
           </div>
         ))}
       </div>
@@ -649,11 +649,11 @@ const SidebarCard = ({
   <div
     className={`rounded-2xl border p-5 ${
       accent
-        ? "border-[#6C50FE]/30 bg-gradient-to-br from-[#6C50FE]/10 to-[#057FFC]/5"
-        : "border-white/10 bg-[#0A0A18]"
+        ? "border-[#4144F2]/25 bg-gradient-to-br from-[#4144F2]/8 to-[#057FFC]/5"
+        : "border-[#161A1D]/10 bg-white shadow-[0_8px_30px_-15px_rgba(22,26,29,0.08)]"
     }`}
   >
-    <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-[#A99CFF] mb-4">
+    <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-[#4144F2] mb-4 font-medium">
       {icon} {title}
     </div>
     {children}
@@ -675,7 +675,7 @@ const ShareRow = () => (
             navigator.clipboard?.writeText(window.location.href);
           }
         }}
-        className="w-9 h-9 rounded-lg border border-white/10 bg-white/[0.03] hover:bg-white/10 hover:border-[#6C50FE]/40 flex items-center justify-center text-white/70 hover:text-white transition-colors"
+        className="w-9 h-9 rounded-lg border border-[#161A1D]/10 bg-white hover:bg-[#4144F2]/8 hover:border-[#4144F2]/40 flex items-center justify-center text-[#161A1D]/70 hover:text-[#4144F2] transition-colors"
       >
         <Icon className="w-4 h-4" />
       </button>
