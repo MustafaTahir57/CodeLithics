@@ -102,22 +102,22 @@ const InsightsBojFed = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#06060B] text-white selection:bg-[#6C50FE]/40">
+    <div className="min-h-screen bg-[#F8F9FC] text-[#161A1D] selection:bg-[#4144F2]/20">
       <Navigation />
 
       {/* Hero */}
       <article>
         <header className="relative pt-32 pb-12 px-4 overflow-hidden">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A18] via-[#06060B] to-[#06060B]" />
-            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[#6C50FE]/20 rounded-full blur-[120px]" />
-            <div className="absolute top-40 right-1/4 w-[500px] h-[500px] bg-[#057FFC]/15 rounded-full blur-[120px]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-white via-[#F8F9FC] to-[#F8F9FC]" />
+            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[#4144F2]/10 rounded-full blur-[120px]" />
+            <div className="absolute top-40 right-1/4 w-[500px] h-[500px] bg-[#057FFC]/10 rounded-full blur-[120px]" />
           </div>
 
           <div className="max-w-[800px] mx-auto">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors mb-8"
+              className="inline-flex items-center gap-2 text-sm text-[#161A1D]/60 hover:text-[#4144F2] transition-colors mb-8"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Codelithics
@@ -128,29 +128,29 @@ const InsightsBojFed = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#6C50FE]/40 bg-[#6C50FE]/10 text-xs uppercase tracking-widest text-[#A99CFF] mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#4144F2]/30 bg-[#4144F2]/8 text-xs uppercase tracking-widest text-[#4144F2] mb-6">
                 <Tag className="w-3 h-3" /> Market Insights
               </div>
 
               <h1 className="font-heading text-4xl md:text-6xl font-bold leading-[1.05] tracking-tight mb-5">
                 Could Japan Trigger the Next{" "}
-                <span className="bg-gradient-to-r from-[#6C50FE] to-[#057FFC] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#4144F2] to-[#057FFC] bg-clip-text text-transparent">
                   Crypto Selloff?
                 </span>
               </h1>
-              <p className="text-lg md:text-xl text-white/70 leading-relaxed mb-8">
+              <p className="text-lg md:text-xl text-[#161A1D]/70 leading-relaxed mb-8">
                 Why June 16–17 Could Be a Critical Week for Global Liquidity.
               </p>
 
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-white/60 pb-8 border-b border-white/10">
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-[#161A1D]/60 pb-8 border-b border-[#161A1D]/10">
                 <span className="inline-flex items-center gap-2">
-                  <User className="w-4 h-4 text-[#6C50FE]" /> Codelithics Research
+                  <User className="w-4 h-4 text-[#4144F2]" /> Codelithics Research
                 </span>
                 <span className="inline-flex items-center gap-2">
-                  <Calendar className="w-4 h-4 text-[#6C50FE]" /> {PUBLISHED_DATE}
+                  <Calendar className="w-4 h-4 text-[#4144F2]" /> {PUBLISHED_DATE}
                 </span>
                 <span className="inline-flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-[#6C50FE]" /> 5 min read
+                  <Clock className="w-4 h-4 text-[#4144F2]" /> 5 min read
                 </span>
               </div>
             </motion.div>
@@ -163,7 +163,7 @@ const InsightsBojFed = () => {
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7 }}
-            className="max-w-[1100px] mx-auto rounded-2xl overflow-hidden border border-white/10 shadow-[0_30px_80px_-30px_rgba(108,80,254,0.5)]"
+            className="max-w-[1100px] mx-auto rounded-2xl overflow-hidden border border-[#161A1D]/10 shadow-[0_30px_80px_-30px_rgba(65,68,242,0.35)]"
           >
             <img
               src={heroImage}
