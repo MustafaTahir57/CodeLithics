@@ -337,7 +337,7 @@ const InsightsBojFed = () => {
                   short-term liquidity — and therefore short-term price action —
                   across nearly every risk asset.
                 </p>
-                <blockquote className="not-prose my-8 border-l-4 border-[#6C50FE] bg-gradient-to-r from-[#6C50FE]/10 to-transparent rounded-r-xl p-6 text-lg md:text-xl text-white/90 italic leading-relaxed">
+                <blockquote className="not-prose my-8 border-l-4 border-[#4144F2] bg-gradient-to-r from-[#4144F2]/8 to-transparent rounded-r-xl p-6 text-lg md:text-xl text-[#161A1D]/90 italic leading-relaxed">
                   "The next few days may not determine the future of crypto, but
                   they could determine the market's direction in the short term.
                   For Web3 builders, understanding liquidity is just as important
@@ -472,10 +472,10 @@ const Section = ({
   children: React.ReactNode;
 }) => (
   <section id={id} className="mt-12 first:mt-0 scroll-mt-28">
-    <h2 className="font-heading text-2xl md:text-3xl font-bold mb-5 text-white">
+    <h2 className="font-heading text-2xl md:text-3xl font-bold mb-5 text-[#161A1D]">
       {title}
     </h2>
-    <div className="prose prose-invert prose-lg max-w-none prose-p:text-white/75 prose-p:leading-[1.8] prose-li:text-white/75 prose-strong:text-white prose-em:text-white/90 prose-a:text-[#A99CFF]">
+    <div className="prose prose-lg max-w-none prose-p:text-[#161A1D]/80 prose-p:leading-[1.8] prose-li:text-[#161A1D]/80 prose-strong:text-[#161A1D] prose-em:text-[#161A1D]/90 prose-a:text-[#4144F2]">
       {children}
     </div>
   </section>
@@ -490,11 +490,11 @@ const InsightCard = ({
   title: string;
   children: React.ReactNode;
 }) => (
-  <div className="not-prose my-8 rounded-2xl border border-[#6C50FE]/30 bg-gradient-to-br from-[#6C50FE]/10 to-[#057FFC]/5 p-6">
-    <div className="flex items-center gap-2 text-[#A99CFF] text-xs uppercase tracking-widest mb-2">
+  <div className="not-prose my-8 rounded-2xl border border-[#4144F2]/25 bg-gradient-to-br from-[#4144F2]/8 to-[#057FFC]/5 p-6">
+    <div className="flex items-center gap-2 text-[#4144F2] text-xs uppercase tracking-widest mb-2 font-medium">
       {icon} {title}
     </div>
-    <div className="text-white/85 leading-relaxed">{children}</div>
+    <div className="text-[#161A1D]/85 leading-relaxed">{children}</div>
   </div>
 );
 
@@ -512,13 +512,13 @@ const CarryStep = ({
   <div
     className={`rounded-xl border p-4 h-full ${
       warn
-        ? "border-amber-500/30 bg-amber-500/5"
-        : "border-white/10 bg-white/[0.03]"
+        ? "border-amber-500/40 bg-amber-50"
+        : "border-[#161A1D]/10 bg-[#F8F9FC]"
     }`}
   >
     <div
       className={`text-xs font-mono mb-2 ${
-        warn ? "text-amber-400" : "text-[#A99CFF]"
+        warn ? "text-amber-600" : "text-[#4144F2]"
       }`}
     >
       {warn ? (
@@ -529,14 +529,14 @@ const CarryStep = ({
         `STEP ${step}`
       )}
     </div>
-    <div className="font-heading font-semibold text-white mb-1">{title}</div>
-    <div className="text-sm text-white/65 leading-relaxed">{desc}</div>
+    <div className="font-heading font-semibold text-[#161A1D] mb-1">{title}</div>
+    <div className="text-sm text-[#161A1D]/65 leading-relaxed">{desc}</div>
   </div>
 );
 
 const CarryArrow = () => (
   <div className="hidden md:flex items-center justify-center">
-    <ArrowRight className="w-6 h-6 text-[#6C50FE]" />
+    <ArrowRight className="w-6 h-6 text-[#4144F2]" />
   </div>
 );
 
@@ -556,25 +556,25 @@ const ComparisonCard = ({
     <div
       className={`rounded-2xl border p-6 ${
         isBull
-          ? "border-emerald-500/25 bg-emerald-500/[0.04]"
-          : "border-rose-500/25 bg-rose-500/[0.04]"
+          ? "border-emerald-500/30 bg-emerald-50"
+          : "border-rose-500/30 bg-rose-50"
       }`}
     >
       <div
         className={`inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-xs uppercase tracking-widest mb-3 ${
           isBull
-            ? "bg-emerald-500/15 text-emerald-300"
-            : "bg-rose-500/15 text-rose-300"
+            ? "bg-emerald-500/15 text-emerald-700"
+            : "bg-rose-500/15 text-rose-700"
         }`}
       >
         {icon} {title}
       </div>
-      <ul className="space-y-2 text-white/80 text-sm">
+      <ul className="space-y-2 text-[#161A1D]/80 text-sm">
         {points.map((p) => (
           <li key={p} className="flex gap-2">
             <CheckCircle2
               className={`w-4 h-4 mt-0.5 flex-shrink-0 ${
-                isBull ? "text-emerald-400" : "text-rose-400"
+                isBull ? "text-emerald-600" : "text-rose-600"
               }`}
             />
             <span>{p}</span>
@@ -600,34 +600,34 @@ const ScenarioCard = ({
 }) => {
   const accent =
     tone === "bull"
-      ? "from-emerald-500/15 to-transparent border-emerald-500/25"
+      ? "from-emerald-500/10 to-transparent border-emerald-500/30"
       : tone === "bear"
-      ? "from-rose-500/15 to-transparent border-rose-500/25"
-      : "from-[#6C50FE]/15 to-transparent border-[#6C50FE]/25";
+      ? "from-rose-500/10 to-transparent border-rose-500/30"
+      : "from-[#4144F2]/10 to-transparent border-[#4144F2]/25";
   return (
     <div
-      className={`rounded-2xl border bg-gradient-to-br ${accent} bg-[#0A0A18] p-6`}
+      className={`rounded-2xl border bg-gradient-to-br ${accent} bg-white p-6 shadow-[0_8px_30px_-15px_rgba(22,26,29,0.08)]`}
     >
       <div className="flex items-start justify-between gap-4 mb-3">
         <div>
-          <div className="text-xs font-mono text-white/50 mb-1">
+          <div className="text-xs font-mono text-[#161A1D]/50 mb-1">
             SCENARIO {n}
           </div>
-          <h3 className="font-heading text-xl font-bold text-white">{title}</h3>
+          <h3 className="font-heading text-xl font-bold text-[#161A1D]">{title}</h3>
         </div>
-        <Bitcoin className="w-5 h-5 text-white/40 flex-shrink-0" />
+        <Bitcoin className="w-5 h-5 text-[#161A1D]/40 flex-shrink-0" />
       </div>
-      <p className="text-white/70 text-sm mb-5 leading-relaxed">{summary}</p>
+      <p className="text-[#161A1D]/70 text-sm mb-5 leading-relaxed">{summary}</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {Object.entries(effects).map(([k, v]) => (
           <div
             key={k}
-            className="rounded-lg border border-white/10 bg-white/[0.02] p-3"
+            className="rounded-lg border border-[#161A1D]/10 bg-[#F8F9FC] p-3"
           >
-            <div className="text-[10px] uppercase tracking-widest text-[#A99CFF] mb-1">
+            <div className="text-[10px] uppercase tracking-widest text-[#4144F2] mb-1 font-medium">
               {k}
             </div>
-            <div className="text-sm text-white/80 leading-snug">{v}</div>
+            <div className="text-sm text-[#161A1D]/80 leading-snug">{v}</div>
           </div>
         ))}
       </div>
@@ -649,11 +649,11 @@ const SidebarCard = ({
   <div
     className={`rounded-2xl border p-5 ${
       accent
-        ? "border-[#6C50FE]/30 bg-gradient-to-br from-[#6C50FE]/10 to-[#057FFC]/5"
-        : "border-white/10 bg-[#0A0A18]"
+        ? "border-[#4144F2]/25 bg-gradient-to-br from-[#4144F2]/8 to-[#057FFC]/5"
+        : "border-[#161A1D]/10 bg-white shadow-[0_8px_30px_-15px_rgba(22,26,29,0.08)]"
     }`}
   >
-    <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-[#A99CFF] mb-4">
+    <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-[#4144F2] mb-4 font-medium">
       {icon} {title}
     </div>
     {children}
@@ -675,7 +675,7 @@ const ShareRow = () => (
             navigator.clipboard?.writeText(window.location.href);
           }
         }}
-        className="w-9 h-9 rounded-lg border border-white/10 bg-white/[0.03] hover:bg-white/10 hover:border-[#6C50FE]/40 flex items-center justify-center text-white/70 hover:text-white transition-colors"
+        className="w-9 h-9 rounded-lg border border-[#161A1D]/10 bg-white hover:bg-[#4144F2]/8 hover:border-[#4144F2]/40 flex items-center justify-center text-[#161A1D]/70 hover:text-[#4144F2] transition-colors"
       >
         <Icon className="w-4 h-4" />
       </button>
