@@ -223,7 +223,7 @@ const InsightsBojFed = () => {
                   modern finance. The mechanic is simple:
                 </p>
 
-                <div className="my-8 rounded-2xl border border-white/10 bg-gradient-to-br from-[#0F0F1F] to-[#0A0A18] p-6 md:p-8">
+                <div className="my-8 rounded-2xl border border-[#161A1D]/10 bg-white p-6 md:p-8 shadow-[0_10px_40px_-15px_rgba(22,26,29,0.1)]">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
                     <CarryStep
                       step="01"
@@ -346,9 +346,9 @@ const InsightsBojFed = () => {
               </Section>
 
               {/* Inline share */}
-              <div className="mt-12 pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
-                <div className="text-sm text-white/60">
-                  Published by <span className="text-white">Codelithics Research</span>
+              <div className="mt-12 pt-8 border-t border-[#161A1D]/10 flex flex-wrap items-center justify-between gap-4">
+                <div className="text-sm text-[#161A1D]/60">
+                  Published by <span className="text-[#161A1D] font-medium">Codelithics Research</span>
                 </div>
                 <ShareRow />
               </div>
@@ -380,7 +380,7 @@ const InsightsBojFed = () => {
                 icon={<Mail className="w-4 h-4" />}
                 accent
               >
-                <p className="text-sm text-white/70 mb-4">
+                <p className="text-sm text-[#161A1D]/70 mb-4">
                   Weekly insights on Web3, AI, and the markets that move them.
                 </p>
                 <form
@@ -390,11 +390,11 @@ const InsightsBojFed = () => {
                   <input
                     type="email"
                     placeholder="you@domain.com"
-                    className="w-full px-3 py-2 rounded-lg bg-[#0A0A18] border border-white/10 focus:border-[#6C50FE] outline-none text-sm placeholder:text-white/40"
+                    className="w-full px-3 py-2 rounded-lg bg-white border border-[#161A1D]/15 focus:border-[#4144F2] outline-none text-sm placeholder:text-[#161A1D]/40 text-[#161A1D]"
                   />
                   <Button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-[#6C50FE] to-[#057FFC] hover:opacity-90 text-white"
+                    className="w-full bg-gradient-to-r from-[#4144F2] to-[#057FFC] hover:opacity-90 text-white"
                   >
                     Subscribe
                   </Button>
@@ -403,13 +403,13 @@ const InsightsBojFed = () => {
 
               <SidebarCard title="Recent articles" icon={<Globe className="w-4 h-4" />}>
                 <ul className="space-y-3 text-sm">
-                  <li className="text-white/80 hover:text-white cursor-pointer">
+                  <li className="text-[#161A1D]/80 hover:text-[#4144F2] cursor-pointer transition-colors">
                     Bitcoin ETF Flows: What the Last 30 Days Tell Us
                   </li>
-                  <li className="text-white/80 hover:text-white cursor-pointer">
+                  <li className="text-[#161A1D]/80 hover:text-[#4144F2] cursor-pointer transition-colors">
                     The Quiet Rise of Onchain AI Agents
                   </li>
-                  <li className="text-white/80 hover:text-white cursor-pointer">
+                  <li className="text-[#161A1D]/80 hover:text-[#4144F2] cursor-pointer transition-colors">
                     Why Stablecoin Velocity Is the New M2
                   </li>
                 </ul>
@@ -420,14 +420,14 @@ const InsightsBojFed = () => {
 
         {/* Footer CTA */}
         <section className="px-4 pb-24">
-          <div className="max-w-[1100px] mx-auto relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#0F0F1F] via-[#0A0A18] to-[#0A0A18] p-10 md:p-16 text-center">
-            <div className="absolute -top-20 -left-20 w-72 h-72 bg-[#6C50FE]/30 rounded-full blur-[120px]" />
-            <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-[#057FFC]/25 rounded-full blur-[120px]" />
+          <div className="max-w-[1100px] mx-auto relative overflow-hidden rounded-3xl border border-[#161A1D]/10 bg-white p-10 md:p-16 text-center shadow-[0_20px_60px_-20px_rgba(22,26,29,0.1)]">
+            <div className="absolute -top-20 -left-20 w-72 h-72 bg-[#4144F2]/15 rounded-full blur-[120px]" />
+            <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-[#057FFC]/15 rounded-full blur-[120px]" />
             <div className="relative">
               <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4">
                 Building in Web3 or AI?
               </h2>
-              <p className="text-white/70 max-w-xl mx-auto mb-8">
+              <p className="text-[#161A1D]/70 max-w-xl mx-auto mb-8">
                 Codelithics partners with founders and teams shipping at the edge
                 of crypto and intelligence.
               </p>
@@ -435,7 +435,7 @@ const InsightsBojFed = () => {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-gradient-to-r from-[#6C50FE] to-[#057FFC] hover:opacity-90 text-white px-8"
+                  className="bg-gradient-to-r from-[#4144F2] to-[#057FFC] hover:opacity-90 text-white px-8"
                 >
                   <Link to="/#contact">
                     Work With Codelithics <ArrowRight className="ml-2 w-4 h-4" />
@@ -445,7 +445,7 @@ const InsightsBojFed = () => {
                   asChild
                   size="lg"
                   variant="outline"
-                  className="border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white px-8"
+                  className="border-[#161A1D]/20 bg-transparent text-[#161A1D] hover:bg-[#161A1D]/5 hover:text-[#161A1D] px-8"
                 >
                   <Link to="/#projects">Explore Our Projects</Link>
                 </Button>
