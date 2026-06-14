@@ -364,10 +364,10 @@ const InsightsBojFed = () => {
                 <ul className="space-y-4">
                   {related.map((r) => (
                     <li key={r.title} className="group cursor-pointer">
-                      <div className="text-[10px] uppercase tracking-widest text-[#A99CFF] mb-1">
+                      <div className="text-[10px] uppercase tracking-widest text-[#4144F2] mb-1 font-medium">
                         {r.tag} · {r.read}
                       </div>
-                      <div className="text-sm text-white/85 group-hover:text-white leading-snug">
+                      <div className="text-sm text-[#161A1D]/85 group-hover:text-[#4144F2] leading-snug transition-colors">
                         {r.title}
                       </div>
                     </li>
