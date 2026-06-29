@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, ArrowRight } from "lucide-react";
-import StaticLogo from "@/components/StaticLogo";
+import AnimatedLogo from "@/components/AnimatedLogo";
 
 const PRIMARY = "#4144F2";
 const BG = "#F8F9FC";
@@ -8,7 +8,7 @@ const INK = "#161A1D";
 
 const Logo = () => (
   <Link to="/" className="inline-flex items-center" style={{ color: INK }} aria-label="Codelithics">
-    <StaticLogo className="h-12 w-auto" />
+    <AnimatedLogo className="h-20 md:h-24 w-auto" />
   </Link>
 );
 
@@ -45,7 +45,7 @@ const InsightsDeveloperOrSlave = () => {
       `}</style>
       {/* Navbar */}
       <nav className="sticky top-0 z-50 backdrop-blur-md border-b" style={{ backgroundColor: `${BG}D9`, borderColor: `${INK}14` }}>
-        <div className="max-w-6xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-5 md:px-8 h-24 flex items-center justify-between">
           <Logo />
           <a
             href="https://codelithics.com"
