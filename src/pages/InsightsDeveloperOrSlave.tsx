@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, ArrowRight } from "lucide-react";
+import StaticLogo from "@/components/StaticLogo";
 
 const PRIMARY = "#3645F1";
 
 const Logo = () => (
-  <Link to="/" className="font-bold text-2xl tracking-tight" style={{ fontFamily: "Poppins, sans-serif" }}>
-    <span style={{ color: PRIMARY }}>code</span>
-    <span className="text-white">lithics</span>
+  <Link to="/" className="inline-flex items-center text-white" aria-label="Codelithics">
+    <StaticLogo className="h-12 w-auto" />
   </Link>
 );
 
