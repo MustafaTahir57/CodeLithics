@@ -5,7 +5,7 @@ import StaticLogo from "@/components/StaticLogo";
 const PRIMARY = "#3645F1";
 
 const Logo = () => (
-  <Link to="/" className="inline-flex items-center" aria-label="Codelithics">
+  <Link to="/" className="inline-flex items-center text-white" aria-label="Codelithics">
     <StaticLogo className="h-12 w-auto" />
   </Link>
 );
