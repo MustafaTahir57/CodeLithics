@@ -1,41 +1,41 @@
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import {Link} from "react-router-dom";
+import {ArrowRight} from "lucide-react";
 import AnimatedLogo from "@/components/AnimatedLogo";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
+import {Button} from "@/components/ui/button";
 
 const PRIMARY = "#4144F2";
 const BG = "#F8F9FC";
 const INK = "#161A1D";
 
 const Logo = () => (
-  <Link to="/" className="inline-flex items-center" style={{ color: INK }} aria-label="Codelithics">
-    <AnimatedLogo className="h-20 md:h-24 w-auto" />
+  <Link to="/" className="inline-flex items-center" style={{color: INK}} aria-label="Codelithics">
+    <AnimatedLogo className="h-18 md:h-20 w-auto" />
   </Link>
 );
 
-const PullQuote = ({ children }: { children: React.ReactNode }) => (
+const PullQuote = ({children}: {children: React.ReactNode}) => (
   <blockquote
     className="my-8 pl-6 py-2 border-l-4 text-xl md:text-2xl italic leading-relaxed"
-    style={{ borderColor: PRIMARY, color: `${INK}E6` }}
+    style={{borderColor: PRIMARY, color: `${INK}E6`}}
   >
     {children}
   </blockquote>
 );
 
-const H2 = ({ children }: { children: React.ReactNode }) => (
-  <h2 className="text-3xl md:text-4xl font-bold mt-14 mb-5 tracking-tight" style={{ color: INK }}>{children}</h2>
+const H2 = ({children}: {children: React.ReactNode}) => (
+  <h2 className="text-3xl md:text-4xl font-bold mt-14 mb-5 tracking-tight" style={{color: INK}}>{children}</h2>
 );
 
-const P = ({ children }: { children: React.ReactNode }) => (
-  <p className="text-base md:text-lg leading-[1.85] mb-5" style={{ color: `${INK}CC` }}>{children}</p>
+const P = ({children}: {children: React.ReactNode}) => (
+  <p className="text-base md:text-lg leading-[1.85] mb-5" style={{color: `${INK}CC`}}>{children}</p>
 );
 
 const InsightsDeveloperOrSlave = () => {
   return (
     <div
       className="min-h-screen poppins-article"
-      style={{ fontFamily: "Poppins, sans-serif", backgroundColor: BG, color: INK }}
+      style={{fontFamily: "Poppins, sans-serif", backgroundColor: BG, color: INK}}
     >
       <style>{`
         .poppins-article, .poppins-article h1, .poppins-article h2, .poppins-article h3,
@@ -46,7 +46,7 @@ const InsightsDeveloperOrSlave = () => {
         }
       `}</style>
       {/* Navbar */}
-      <nav className="sticky top-0 z-50 backdrop-blur-md border-b" style={{ backgroundColor: `${BG}D9`, borderColor: `${INK}14` }}>
+      <nav className="sticky top-0 z-50 backdrop-blur-md border-b" style={{backgroundColor: `${BG}D9`, borderColor: `${INK}14`}}>
         <div className="max-w-6xl mx-auto px-5 md:px-8 h-24 flex items-center justify-between">
           <Logo />
           <a
@@ -54,7 +54,7 @@ const InsightsDeveloperOrSlave = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center gap-2 text-sm font-medium transition-colors hover:opacity-80"
-            style={{ color: INK }}
+            style={{color: INK}}
           >
             Visit Codelithics <ArrowRight className="w-4 h-4" />
           </a>
@@ -63,21 +63,21 @@ const InsightsDeveloperOrSlave = () => {
 
       {/* Hero */}
       <header className="max-w-4xl mx-auto px-5 md:px-8 pt-16 md:pt-24 pb-10">
-        <div className="text-xs uppercase tracking-[0.2em] mb-6" style={{ color: `${INK}80` }}>
+        <div className="text-xs uppercase tracking-[0.2em] mb-6" style={{color: `${INK}80`}}>
           Codelithics · Insights
         </div>
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-6" style={{ color: INK }}>
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-6" style={{color: INK}}>
           Developer or Slave?
         </h1>
-        <p className="text-xl md:text-2xl font-medium mb-8" style={{ color: PRIMARY }}>
+        <p className="text-xl md:text-2xl font-medium mb-8" style={{color: PRIMARY}}>
           The Freelance Market's Race to the Bottom
         </p>
-        <div className="flex items-center gap-3 text-sm" style={{ color: `${INK}80` }}>
+        <div className="flex items-center gap-3 text-sm" style={{color: `${INK}80`}}>
           <span>Published June 29, 2026</span>
           <span>·</span>
           <span>8 min read</span>
         </div>
-        <div className="mt-12 h-px w-full" style={{ backgroundColor: `${INK}1A` }} />
+        <div className="mt-12 h-px w-full" style={{backgroundColor: `${INK}1A`}} />
       </header>
 
       {/* Body */}
@@ -158,26 +158,26 @@ const InsightsDeveloperOrSlave = () => {
           track. A few principles that consistently work:
         </P>
         <P>
-          <strong style={{ color: INK }}>Specialize aggressively.</strong> Generalists
+          <strong style={{color: INK}}>Specialize aggressively.</strong> Generalists
           compete on price. Specialists compete on outcomes. A "React developer"
           is one of a million. A "developer who ships secure ERC-4626 vaults" is
           one of a few hundred. Specialization is the fastest way to leave the
           auction.
         </P>
         <P>
-          <strong style={{ color: INK }}>Sell results, not hours.</strong> Hourly
+          <strong style={{color: INK}}>Sell results, not hours.</strong> Hourly
           rates invite negotiation downward. Outcomes — "I will ship X in Y weeks
           for Z" — invite negotiation around scope, which is where real value
           lives.
         </P>
         <P>
-          <strong style={{ color: INK }}>Build a body of work.</strong> A serious
+          <strong style={{color: INK}}>Build a body of work.</strong> A serious
           portfolio, a couple of public repositories, a few case studies — these
           do more for your pricing power than a thousand polished proposals on a
           marketplace.
         </P>
         <P>
-          <strong style={{ color: INK }}>Leave the platforms eventually.</strong>{" "}
+          <strong style={{color: INK}}>Leave the platforms eventually.</strong>{" "}
           Marketplaces are useful for early traction, but every long-term
           developer career is built on direct relationships, referrals, and
           inbound demand. The freelancers who escape the race are the ones who
@@ -204,7 +204,7 @@ const InsightsDeveloperOrSlave = () => {
           <div className="absolute -top-20 -left-20 w-72 h-72 bg-[#4144F2]/15 rounded-full blur-[120px]" />
           <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-[#057FFC]/15 rounded-full blur-[120px]" />
           <div className="relative">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ color: INK }}>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{color: INK}}>
               Building in Web3 or AI?
             </h2>
             <p className="text-[#161A1D]/70 max-w-xl mx-auto mb-8">
