@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import AnimatedLogo from "@/components/AnimatedLogo";
+import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
 
 const PRIMARY = "#4144F2";
 const BG = "#F8F9FC";
@@ -196,47 +198,43 @@ const InsightsDeveloperOrSlave = () => {
         </P>
       </article>
 
-      {/* CTA */}
-      <section className="border-t" style={{ borderColor: `${INK}1A` }}>
-        <div className="max-w-4xl mx-auto px-5 md:px-8 py-20 md:py-28 text-center">
-          <h3 className="text-3xl md:text-5xl font-bold tracking-tight mb-5" style={{ color: INK }}>
-            Work with a team that values quality.
-          </h3>
-          <p className="text-lg max-w-2xl mx-auto mb-10" style={{ color: `${INK}A6` }}>
-            Codelithics is a Web3 & AI development studio building serious
-            software for serious teams. No race. No shortcuts.
-          </p>
-          <a
-            href="https://codelithics.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-white transition-transform hover:-translate-y-0.5"
-            style={{ backgroundColor: PRIMARY, boxShadow: `0 10px 40px -10px ${PRIMARY}` }}
-          >
-            Work with Codelithics <ArrowRight className="w-5 h-5" />
-          </a>
+      {/* Footer CTA */}
+      <section className="px-4 pb-24">
+        <div className="max-w-[1100px] mx-auto relative overflow-hidden rounded-3xl border border-[#161A1D]/10 bg-white p-10 md:p-16 text-center shadow-[0_20px_60px_-20px_rgba(22,26,29,0.1)]">
+          <div className="absolute -top-20 -left-20 w-72 h-72 bg-[#4144F2]/15 rounded-full blur-[120px]" />
+          <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-[#057FFC]/15 rounded-full blur-[120px]" />
+          <div className="relative">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ color: INK }}>
+              Building in Web3 or AI?
+            </h2>
+            <p className="text-[#161A1D]/70 max-w-xl mx-auto mb-8">
+              Codelithics partners with founders and teams shipping at the edge
+              of crypto and intelligence.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Button
+                asChild
+                size="lg"
+                className="bg-gradient-to-r from-[#4144F2] to-[#057FFC] hover:opacity-90 text-white px-8"
+              >
+                <Link to="/#contact">
+                  Work With Codelithics <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-[#161A1D]/20 bg-transparent text-[#161A1D] hover:bg-[#161A1D]/5 hover:text-[#161A1D] px-8"
+              >
+                <Link to="/#projects">Explore Our Projects</Link>
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t" style={{ borderColor: `${INK}1A` }}>
-        <div className="max-w-6xl mx-auto px-5 md:px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
-          <Logo />
-          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-sm" style={{ color: `${INK}A6` }}>
-            <a href="mailto:contact@codelithics.com" className="inline-flex items-center gap-2 transition-colors hover:opacity-80">
-              <Mail className="w-4 h-4" style={{ color: PRIMARY }} />
-              contact@codelithics.com
-            </a>
-            <a href="tel:+923484760460" className="inline-flex items-center gap-2 transition-colors hover:opacity-80">
-              <Phone className="w-4 h-4" style={{ color: PRIMARY }} />
-              +92 348 4760460
-            </a>
-          </div>
-          <div className="text-xs" style={{ color: `${INK}80` }}>
-            © {new Date().getFullYear()} Codelithics
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
