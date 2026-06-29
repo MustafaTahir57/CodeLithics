@@ -30,7 +30,7 @@ const P = ({ children }: { children: React.ReactNode }) => (
 const InsightsDeveloperOrSlave = () => {
   return (
     <div
-      className="min-h-screen bg-[#0C0D0D] text-white"
+      className="min-h-screen bg-[#0C0D0D] text-white poppins-article"
       style={{ fontFamily: "Poppins, sans-serif" }}
     >
       <style>{`
