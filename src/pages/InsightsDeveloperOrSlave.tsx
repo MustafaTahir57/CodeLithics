@@ -33,6 +33,14 @@ const InsightsDeveloperOrSlave = () => {
       className="min-h-screen bg-[#0C0D0D] text-white"
       style={{ fontFamily: "Poppins, sans-serif" }}
     >
+      <style>{`
+        .poppins-article, .poppins-article h1, .poppins-article h2, .poppins-article h3,
+        .poppins-article h4, .poppins-article h5, .poppins-article h6,
+        .poppins-article p, .poppins-article a, .poppins-article span,
+        .poppins-article blockquote, .poppins-article button {
+          font-family: 'Poppins', sans-serif !important;
+        }
+      `}</style>
       {/* Navbar */}
       <nav className="sticky top-0 z-50 bg-[#0C0D0D]/85 backdrop-blur-md border-b border-white/5">
         <div className="max-w-6xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
